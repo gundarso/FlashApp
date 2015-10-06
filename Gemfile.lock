@@ -63,6 +63,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-i18n (0.12.1)
+    devise-i18n-views (0.3.5)
     erubis (2.7.0)
     execjs (2.6.0)
     font-awesome-sass (4.4.0)
@@ -90,6 +92,7 @@ GEM
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     pg (0.18.3)
+    puma (2.14.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -112,6 +115,11 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.2)
       loofah (~> 2.0)
+    rails_12factor (0.0.3)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.4)
+    rails_stdout_logging (0.0.4)
     railties (4.2.4)
       actionpack (= 4.2.4)
       activesupport (= 4.2.4)
@@ -144,6 +152,8 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.1)
+    traco (3.1.6)
+      activerecord (>= 3.0)
     turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
@@ -168,14 +178,19 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-sass
+  devise-i18n
+  devise-i18n-views
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  puma
   rails (= 4.2.4)
+  rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
   spring
+  traco
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
