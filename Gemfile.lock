@@ -67,10 +67,10 @@ GEM
     devise-i18n-views (0.3.5)
     erubis (2.7.0)
     execjs (2.6.0)
-    font-awesome-sass (4.4.0)
-      sass (>= 3.2)
     figaro (1.1.1)
       thor (~> 0.14)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
@@ -179,10 +179,10 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
-  font-awesome-sass
   devise-i18n
   devise-i18n-views
   figaro
+  font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   pg
