@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :shops
   get 'welcome/index'
 
   get 'welcome/show'
