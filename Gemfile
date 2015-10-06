@@ -59,3 +59,5 @@ group :production do
 end
 
 gem 'traco'
+
+gem 'figaro'
