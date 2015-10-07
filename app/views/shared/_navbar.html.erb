@@ -1,5 +1,3 @@
-
-
 <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -16,6 +14,21 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                <% if customer_signed_in? || shop_signed_in?  %>
+                <li>
+                <a class="page-scroll" href="/#contact">Contact</a></li>
+                <li class="dropdown">
+                      <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="drop2">
+                        <li><%= link_to destroy_customer_session_path || destroy_shop_session, method: :delete do %>
+                        <%= t ".sign_out", default: "Log out" %></li>
+                        <% end %>
+                      </ul>
+                    </li>
+                    <% else %>
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
@@ -26,7 +39,7 @@
                         <a class="page-scroll" href="#team">Team</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="/#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li class="dropdown">
                       <a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -49,6 +62,7 @@
                       </ul>
                     </li>
                 </ul>
+                <% end %>
 
 
 
