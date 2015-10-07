@@ -16,17 +16,19 @@
 
 </head>
 <body id="page-top" class="index">
+<%= current_customer %>
+<%= current_shop %>
 
-Customer: <%= current_customer %>
-Shop: <%= current_shop %>
-
-<%= render 'shared/flashes' %>
+<%#= render 'shared/flashes' %>
+<%= render 'shared/navbar' %>
 <!--
 >>>>>>> master
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
  -->
 <%= yield %>
+
+<%= render 'shared/footer' %>
 
  <%= javascript_include_tag "application" %>
 </body>
