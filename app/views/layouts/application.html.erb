@@ -8,23 +8,17 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
    <!-- Custom Fonts -->
-
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
 </head>
 <body id="page-top" class="index">
-
-<%= render 'shared/flashes' %>
-<!--
->>>>>>> master
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
- -->
+  <%= render "shared/navbar" %>
+  <%#= render 'shared/notices' %>
+  <%#= render 'shared/alerts' %>
 <%= yield %>
-
+  <%= render "shared/footer" %>
  <%= javascript_include_tag "application" %>
 </body>
 </html>
