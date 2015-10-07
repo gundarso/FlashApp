@@ -1,21 +1,24 @@
 Rails.application.routes.draw do
 
-  devise_for :customers
+  scope '(:locale)', locale: /fr|nl|de/ do
 
-  devise_for :shops
+    devise_for :customers
 
-  get 'welcome/index'
+    devise_for :shops
 
-  get 'welcome/show'
+    get 'welcome/index'
 
-  root 'welcome#index'
+    get 'welcome/show'
 
-  resources :shops do
-    resources :sales
+    root 'welcome#index'
+
+    resources :shops do
+      resources :sales
+    end
+
+    resources :customers
+
   end
-
-  resources :customers
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
