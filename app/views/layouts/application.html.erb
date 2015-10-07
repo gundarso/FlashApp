@@ -8,7 +8,6 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
    <!-- Custom Fonts -->
-
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='/fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -16,21 +15,14 @@
 
 </head>
 <body id="page-top" class="index">
-<%= current_customer %>
-<%= current_shop %>
 
 <%#= render 'shared/flashes' %>
 <%= render 'shared/navbar' %>
-<!--
->>>>>>> master
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
- -->
 <%= yield %>
-
 <%= render 'shared/footer' %>
+<%= javascript_include_tag "application" %>
 
- <%= javascript_include_tag "application" %>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 </html>
 
