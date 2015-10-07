@@ -1,14 +1,7 @@
 class ShopsController < ApplicationController
-  def index
-  end
+  before_action :authenticate_shop!, only: [:edit, :update, :destroy]
 
   def show
-  end
-
-  def new
-  end
-
-  def create
   end
 
   def edit

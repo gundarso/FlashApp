@@ -1,14 +1,7 @@
 class CustomersController < ApplicationController
-  def index
-  end
+  before_action :authenticate_customer!
 
   def show
-  end
-
-  def new
-  end
-
-  def create
   end
 
   def edit
