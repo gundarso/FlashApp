@@ -12,7 +12,7 @@ class ShopsController < ApplicationController
   def update
     @shop.update(shop_params)
     if @shop.valid?
-      redirect_to shop_path(@shop), notice: "Your shop was successfully updated!"
+      redirect_to shop_path(@shop)
     else
       render :edit
     end
