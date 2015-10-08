@@ -7,11 +7,19 @@
 body {
     overflow-x: hidden;
     font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+    height:100%;
 }
 
 .text-muted {
     color: #777;
 }
+
+.picturefashion {
+  background-image: url(fashionbackground.jpg);
+  height: 100%;
+}
+
+
 
 .text-primary {
     color: #fed136;
