@@ -23,7 +23,7 @@
                         <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="drop2">
-                        <li><%= link_to destroy_customer_session_path || destroy_shop_session, method: :delete do %>
+                        <li><%= link_to destroy_customer_session_path || destroy_shop_session_path, method: :delete do %>
                         <%= t ".sign_out", default: "Log out" %></li>
                         <% end %>
                       </ul>
@@ -61,10 +61,8 @@
                         <li><%= link_to "Shop", new_shop_session_path %></li>
                       </ul>
                     </li>
-                </ul>
+                  </ul>
                 <% end %>
-
-
 
     </div><!-- /.navbar-collapse -->
 

@@ -12,4 +12,10 @@ class ApplicationController < ActionController::Base
     { locale: I18n.locale == I18n.default_locale ? nil : I18n.locale }
   end
 
+  protected
+
+  def after_sign_in_path_for(resource)
+    resource.class == Shop ? shop_path(resource) : customer_path(resource)
+  end
+
 end
