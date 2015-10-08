@@ -227,13 +227,13 @@ fieldset[disabled] .btn-xl.active {
 .navbar-default .navbar-nav>.active>a:hover,
 .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
-    background-color: #fec503;
+    background-color: black;
 }
 
 .navbar-nav .dropdown {
   .dropdown-menu{
-    background:transparent;
-  }
+    background: black;
+      }
 }
 
 
@@ -272,7 +272,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(http://ironsummitmedia.github.io/startbootstrap-agency/img/header-bg.jpg);
+    background-image: url(Background.jpg);
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;

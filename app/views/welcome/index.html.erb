@@ -11,7 +11,7 @@
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To Get'n'Go</div>
-                <div class="intro-heading"> Get Flash Sales everywhere everyday </div>
+                <div class="intro-heading"> Get Flash Sales everywhere every day </div>
                 <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
@@ -23,34 +23,31 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">GnG enables customers to benefits from flash sales everyday and located just next to them</h3>
+                    <h3 class="section-subheading text-muted">GnG enables customers to benefits from flash sales every day and located just next to them</h3>
                     <h3 class="section-heading">How does it work ?</h3>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <img src="Login.png" class="fa fa-circle fa-stack-2x text-primary>
-                        <img src=" class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
-                    </span>
+                    <div class="How-Work">
+                        <%= image_tag("Login_computer.png", :alt => "image", width:"126") %>
+                    </div>
                     <h4 class="service-heading">1.Register yourself</h4>
-                    <p class="text-muted"> In just 3 clicks you'll be log in and access a rich personalized newsfeed .</p>
-                     <a href="#services" class="page-scroll btn btn-xl">Let's register now !</a>
+                    <p class="text-muted"> In just 3 clicks you'll be log in and access a rich personalized newsfeed of products.</p>
+                     <a href="http://localhost:3000/customers/sign_up" class="page-scroll btn btn-xl">Let's register now !</a>
+                   <a href="http://localhost:3000/shops/sign_up"><h6> Click here if you are a shop !<h6></a>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">2.Search your product</h4>
-                    <p class="text-muted"> Research the product you want and get all the information you need.</p>
+                        <div class="How-Work">
+                        <%= image_tag("Searchpicture.png", :alt => "image", width:"100") %>
+                      </div>
+                    <h4 class="service-heading">2.Search the flash product</h4>
+                    <p class="text-muted"> Research the product you want located near you and get all the information you need.</p>
                 </div>
                 <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
-                    </span>
+                        <div class="How-Work">
+                        <%= image_tag("Shoppicutre.png", :alt => "image", width:"113") %>
+                       </div>
                     <h4 class="service-heading">3.Go & Get it !</h4>
                     <p class="text-muted">Finally, just launch our GPS mode and go quickly get your product </p>
                 </div>
@@ -66,51 +63,40 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Our Team</h2>
-                    <h3 class="section-subheading text-muted"> An experienced & multicultural complementary Team </h3>
+                    <h3 class="section-subheading text-muted"> Experienced & complementary Team </h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+
+                        <%= image_tag("Gundars.jpg", :alt => "image", width:"100") %>
                         <h4>Gundars</h4>
-                        <p class="text-muted">Lead Back-end Developer</p>
+                        <p class="text-muted">Lead back-end Developer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/pub/gundars-ostrovskis/17/b0b/217"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <%= image_tag("ced.jpg", :alt => "image", width:"140") %>
                         <h4>Cedric Goffeau</h4>
-                        <p class="text-muted">CEO & Lead Marketing</p>
+                        <p class="text-muted">Lead front-end Developer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://www.linkedin.com/profile/view?id=AAIAAAornEABaNcN01KbpDd0gohf2ZzU9mPLHZM&trk=nav_responsive_tab_profile_pic"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <%= image_tag("Guillem.png", :alt => "image", width:"95") %>
                         <h4>Guillaume de Roquefeuil</h4>
-                        <p class="text-muted">Lead Front-end Developer</p>
+                        <p class="text-muted">Back-end Developer</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="s><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
