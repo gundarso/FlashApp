@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151008085121) do
+ActiveRecord::Schema.define(version: 20151008105444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20151008085121) do
 
   create_table "shops", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
+    t.string   "street_address"
     t.datetime "opening"
     t.datetime "closing"
     t.string   "phone"
@@ -104,6 +104,9 @@ ActiveRecord::Schema.define(version: 20151008085121) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
+    t.string   "city"
+    t.string   "postcode"
+    t.string   "country"
   end
 
   add_index "shops", ["email"], name: "index_shops_on_email", unique: true, using: :btree
