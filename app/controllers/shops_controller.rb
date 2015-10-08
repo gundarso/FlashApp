@@ -3,7 +3,6 @@ class ShopsController < ApplicationController
   before_action :find_shop
 
   def show
-    @shop = Shop.find(params[:id])
     #@shop_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
   end
 
@@ -27,7 +26,7 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-    params.require(:shop).permit(:name, :street_address, :city, :postcode, :country, :opening, :closing, :phone, :contact_email, :category_id, :picture)
+    params.require(:shop).permit(:name, :street_address, :city, :postcode, :country, :opening, :closing, :phone, :contact_email, :categories, :picture)
   end
 
   def find_shop

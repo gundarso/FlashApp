@@ -2,13 +2,15 @@
 <div class="container text-center">
 <h1>Shop details</h1>
   <strong>Name:</strong> <%= @shop.name %><br>
+  <ul>
     <% @shop.categories.each do |category| %>
-  <strong>Categories:</strong><%= category.name %><br>
+    <li><strong>Categories:</strong><%= @shop.category.name %><li>
     <% end %>
-    <strong>Street address:</strong> <%= @shop.street_address %><br>
+  </ul>
+  <strong>Street address:</strong> <%= @shop.street_address %><br>
   <strong>City:</strong> <%= @shop.city %><br>
   <strong>Postcode:</strong> <%= @shop.postcode %><br>
-  <storng>Country:</strong> <%= @shop.country %><br>
+  <strong>Country:</strong> <%= @shop.country %><br>
   <strong>Opening time:</strong> <%= @shop.opening %><br>
   <strong>Closing time:</strong> <%= @shop.closing %><br>
   <strong>Phone:</strong> <%= @shop.phone %><br>
