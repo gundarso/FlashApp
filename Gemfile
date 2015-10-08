@@ -24,7 +24,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap-sass'
+
 gem 'font-awesome-sass'
+
 gem 'simple_form'
 
 # Use ActiveModel has_secure_password
@@ -69,3 +71,5 @@ gem 'figaro'
 gem 'aws-sdk', '< 2.0'
 
 gem 'paperclip'
+
+gem 'country_select'
