@@ -1,2 +1,21 @@
-<h1>Shops#show</h1>
-<p>Find me in app/views/shops/show.html.erb</p>
+<div class="row">
+<div class="container text-center">
+<h1>Shop details</h1>
+  <strong>Name:</strong> <%= @shop.name %><br>
+    <% @shop.categories.each do |category| %>
+  <strong>Categories:</strong><%= category.name %><br>
+    <% end %>
+    <strong>Street address:</strong> <%= @shop.street_address %><br>
+  <strong>City:</strong> <%= @shop.city %><br>
+  <strong>Postcode:</strong> <%= @shop.postcode %><br>
+  <storng>Country:</strong> <%= @shop.country %><br>
+  <strong>Opening time:</strong> <%= @shop.opening %><br>
+  <strong>Closing time:</strong> <%= @shop.closing %><br>
+  <strong>Phone:</strong> <%= @shop.phone %><br>
+  <strong>Contact email:</strong> <%= @shop.contact_email %><br>
+
+<%= image_tag @shop.picture.url(:medium) %><br>
+
+<% if shop_signed_in? %>
+<%= link_to 'Edit your shop details', edit_shop_path(@shop), class: "btn btn-primary" %>
+<% end %>
