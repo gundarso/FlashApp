@@ -15,7 +15,7 @@ body {
 }
 
 .picturefashion {
-  background-image: url(fashionbackground.jpg);
+  background-image: image-url('Background.jpg');
   height: 100%;
 }
 
@@ -280,7 +280,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url(Background.jpg);
+    background-image: image-url('Background.jpg');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;

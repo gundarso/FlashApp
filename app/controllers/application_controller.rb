@@ -14,8 +14,12 @@ class ApplicationController < ActionController::Base
 
   protected
 
-  #def after_sign_in_path_for(resource)
-    #resource.class == Shop ? shop_path(resource) : customer_path(resource)
-  #end
+  def after_sign_in_path_for(resource)
+    if resource.sign_in_count == 1
+    resource.class == Shop ? shop_path(resource) : customer_path(resource)
+    else
+      root_path
+    end
+  end
 
 end

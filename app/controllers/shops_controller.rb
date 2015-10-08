@@ -3,7 +3,6 @@ class ShopsController < ApplicationController
   before_action :find_shop
 
   def show
-    @shop = Shop.find(params[:id])
     #@shop_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
   end
 
@@ -13,7 +12,7 @@ class ShopsController < ApplicationController
   def update
     @shop.update(shop_params)
     if @shop.valid?
-      redirect_to shop_path(@shop), notice: "Your shop was successfully updated!"
+      redirect_to shop_path(@shop)
     else
       render :edit
     end
@@ -27,7 +26,7 @@ class ShopsController < ApplicationController
   private
 
   def shop_params
-    params.require(:shop).permit(:name, :street_address, :city, :postcode, :country, :opening, :closing, :phone, :contact_email, :category_id, :picture)
+    params.require(:shop).permit(:name, :street_address, :city, :postcode, :country, :opening, :closing, :phone, :contact_email, :categories, :picture)
   end
 
   def find_shop

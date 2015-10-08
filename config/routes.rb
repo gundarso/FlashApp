@@ -2,8 +2,8 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /fr|nl|de/ do
 
-    devise_for :shops, controllers: { sessions: "sessions" }
-    devise_for :customers, controllers: { sessions: "sessions" }
+    devise_for :shops
+    devise_for :customers
 
 
     get 'welcome/index'
