@@ -1,3 +1,4 @@
+if Rails.env.production?
 ActionMailer::Base.smtp_settings = {
   address: 'smtp.postmarkapp.com',
   port: '25',
@@ -7,3 +8,4 @@ ActionMailer::Base.smtp_settings = {
   authentication: :cram_md5,
   enable_starttls_auto: true
 }
+end
