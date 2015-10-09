@@ -1,2 +1,30 @@
-<h1>Sales#new</h1>
-<p>Find me in app/views/sales/new.html.erb</p>
+<h1>Add a new sale</h1>
+
+<%= simple_form_for [@shop, @sale] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-left">
+      <div class="card-block shadowed-box text-center">
+        <div class= "sizee">
+          <div class="form-inputs">
+            <%= f.association :categories, as: :check_boxes %>
+            <%= f.input :product_name %>
+            <%= f.input :product_description %>
+            <%= f.input :product_quantity %>
+            <%= f.input :picture %>
+            <%= f.input :price %>
+            <%= f.input :terms %>
+            <%= f.input :starting %>
+            <%= f.input :ending %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class ="sizee">
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  </div>
+<% end %>_
