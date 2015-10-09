@@ -21,11 +21,11 @@
                         <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="drop2">
-                        <% if customer_signed_in? %>
-                          <li><%= link_to "View profile", customer_path(current_customer) %></li>
-                          <% else %>
-                          <li><%= link_to "View profile", shop_path(current_shop) %></li>
-                          <% end %>
+                      <% if customer_signed_in? %>
+                        <li><%= link_to "View profile", customer_path(current_customer) %></li>
+                      <% else %>
+                        <li><%= link_to "View profile", shop_path(current_shop) %></li>
+                      <% end %>
                         <li><%= link_to destroy_customer_session_path || destroy_shop_session_path, method: :delete do %>
                         <%= t ".sign_out", default: "Log out" %></li>
                         <% end %>
