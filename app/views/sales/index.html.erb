@@ -1,2 +1,9 @@
-<h1>Sales#index</h1>
-<p>Find me in app/views/sales/index.html.erb</p>
+<h1>This shop currently has the following active sales:</h1>
+
+<% @shop.sales.each do |sale| %>
+<strong>Sales category:</strong> <%= sale.category.name if sale.category %><br>
+<strong>Product name:</strong> <%= sale.product_name %><br>
+<strong>Price:</strong> <%= sale.price %> euros <br>
+<strong>Sales terms & conditions:</strong> <%= sale.terms %><br>
+<%= link_to 'View sale details', shop_sale_path(@shop, sale), class: "btn btn-primary" %>
+<% end %>
