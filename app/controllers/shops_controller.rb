@@ -10,13 +10,15 @@ class ShopsController < ApplicationController
   end
 
   def update
-    if current_user == @shop
-    @shop.update(shop_params)
+    if current_shop == @shop
+      @shop.update(shop_params)
       if @shop.valid?
         redirect_to shop_path(@shop), notice: "Your shop profile has been successfully updated"
       else
         render :edit
       end
+    else
+      redirect_to shop_path(@shop), notice: "You are not authorized to edit this page!"
     end
   end
 
