@@ -27,7 +27,7 @@
     overflow: hidden;
     text-align: center;
     background-color: #fff;
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .card.hovercard .card-background {
     height: 130px;
@@ -42,12 +42,6 @@
     margin-top: -200px;
     min-width: 130%;
 }
-.card.hovercard .useravatar {
-    position: absolute;
-    top: 15px;
-    left: 0;
-    right: 0;
-}
 .card.hovercard .useravatar img {
     width: 100px;
     height: 100px;
@@ -57,12 +51,6 @@
     -moz-border-radius: 50%;
     border-radius: 50%;
     border: 5px solid rgba(255, 255, 255, 0.5);
-}
-.card.hovercard .card-info {
-    position: absolute;
-    bottom: 14px;
-    left: 0;
-    right: 0;
 }
 .card.hovercard .card-info .card-title {
     padding:0 5px;

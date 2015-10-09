@@ -1,17 +1,14 @@
-<div class="picturefashion">
+<div class="changesbackground">
       <div class="row">
 <div class="col-lg-12 text-center padding-top col-lg-12">
     <div class="card hovercard">
-        <div class="card-background">
-            <img class="card-bkimg" alt="" src="https://images.unsplash.com/photo-1430375642086-147fcd5fea57?q=80&fm=jpg&s=1cebba51d8f877740ad9ebb7c5861109">
-            <!-- http://lorempixel.com/850/280/people/9/ -->
-        </div>
         <div class="useravatar">
             <%= image_tag @customer.picture.url(:medium) %>
         </div>
         <div class="card-info"> <span class="card-title"><%= @customer.first_name %></span>
 
         </div>
+
     </div>
         <div class="well margin-left-right">
       <div class="tab-content">
@@ -28,7 +25,8 @@
         <%= link_to 'Edit your profile details', edit_customer_path(@customer), class: "btn btn-primary" %>
         <% end %>
         </div>
-      </div>
+    </div>
+
     </div>
   </div>
   </div>
