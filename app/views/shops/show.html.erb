@@ -33,6 +33,7 @@
 
 <% if shop_signed_in? %>
 <%= link_to 'Edit your shop details', edit_shop_path(@shop), class: "btn btn-primary" %>
+<%= link_to 'Add a new sale', new_shop_sale_path(@shop), class: "btn btn-primary" %>
 <% end %>
        </div>
       </div>
