@@ -8,20 +8,22 @@
         <div class="card-info"> <span class="card-title"><%= @customer.first_name %></span>
 
         </div>
-        <div class="tab-content">
-        <h1>Profile details</h1>
-              <strong>Name:</strong> <%= @customer.first_name %><br>
-              <strong>Age:</strong> <%= @customer.age %><br>
-              <strong>Base location:</strong> <%= @customer.base_location %><br>
-              <h3>Categories of interest</h3>
-              <strong>Categories:</strong><br>
-              <% @customer.categories.each do |category| %>
-      <%= category.name %><br>
-      <% end %>
 
-          <% if customer_signed_in? %>
-          <%= link_to 'Edit your profile details', edit_customer_path(@customer), class: "btn btn-primary" %>
-          <% end %>
+    </div>
+        <div class="well margin-left-right">
+      <div class="tab-content">
+      <h1>Profile details</h1>
+            <strong>Name:</strong> <%= @customer.first_name %><br>
+            <strong>Age:</strong> <%= @customer.age %><br>
+            <strong>Base location:</strong> <%= @customer.base_location %><br>
+            <h3>Categories of interest</h3>
+            <strong>Categories:</strong><br>
+            <% @customer.categories.each do |category| %>
+            <%= category.name %><br>
+            <% end %>
+        <% if customer_signed_in? %>
+        <%= link_to 'Edit your profile details', edit_customer_path(@customer), class: "btn btn-primary" %>
+        <% end %>
         </div>
     </div>
 
