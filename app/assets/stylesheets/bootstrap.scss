@@ -10,6 +10,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
       height:100%;
+
 }
 body {
   margin: 0;
@@ -40,9 +41,6 @@ audio:not([controls]) {
   display: none;
   height: 0;
 }
-
-
-
 [hidden],
 template {
   display: none;
