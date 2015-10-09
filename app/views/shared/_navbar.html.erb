@@ -8,7 +8,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Get'n'Go</a>
+                 <li><%= link_to image_tag("GetNGo1.png", :alt => "image", width:"115", class: "navbar-brand page-scroll"), root_path %></li>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -21,6 +21,7 @@
                         <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="drop2">
+                      <li><%= link_to "View profile", customer_path(current_customer) || shop_path(current_shop) %></li>
                         <li><%= link_to destroy_customer_session_path || destroy_shop_session_path, method: :delete do %>
                         <%= t ".sign_out", default: "Log out" %></li>
                         <% end %>

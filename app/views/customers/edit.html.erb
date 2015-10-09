@@ -13,7 +13,8 @@
             <%= f.input :age %>
             <%= f.input :gender %>
             <%= f.input :base_location %>
-            <%= f.association :categories, as: :check_boxes, label: 'Categories of interest:'%>
+            <%= f.association :categories, as: :check_boxes, label: "Categories of interest"%>
+            <%= f.input :picture %>
           </div>
         </div>
       </div>
@@ -24,4 +25,4 @@
       <%= f.button :submit %>
     </div>
   </div>
-<% end %>_
+<% end %>

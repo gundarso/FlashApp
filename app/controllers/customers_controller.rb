@@ -34,7 +34,7 @@ class CustomersController < ApplicationController
   private
 
   def customer_params
-    params.require(:customer).permit(:first_name, :family_name, :age, :gender, :base_location, {:category_ids => []})
+    params.require(:customer).permit(:first_name, :family_name, :age, :gender, :base_location, :picture, {:category_ids => []})
   end
 
   def find_customer
