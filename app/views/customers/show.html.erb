@@ -20,11 +20,10 @@
             <strong>Age:</strong> <%= @customer.age %><br>
             <strong>Base location:</strong> <%= @customer.base_location %><br>
             <h3>Categories of interest</h3>
-            <ul>
-            <% @customer.categories.each do |category| %>
-    <li><strong>Categories:</strong><%= @customer.category.name %><li>
-    <% end %>
-            </ul>
+            <strong>Categories:</strong><br>
+              <% @customer.categories.each do |category| %>
+              <%= category.name %><br>
+              <% end %>
         <h3>Edit your profile here</h3>
         <% if customer_signed_in? %>
         <%= link_to 'Edit your profile details', edit_customer_path(@customer), class: "btn btn-primary" %>

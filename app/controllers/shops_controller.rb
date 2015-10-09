@@ -10,17 +10,19 @@ class ShopsController < ApplicationController
   end
 
   def update
+    if current_user == @shop
     @shop.update(shop_params)
-    if @shop.valid?
-      redirect_to shop_path(@shop)
-    else
-      render :edit
+      if @shop.valid?
+        redirect_to shop_path(@shop), notice: "Your shop profile has been successfully updated"
+      else
+        render :edit
+      end
     end
   end
 
   def destroy
     @shop.destroy
-    redirect_to root_path
+    redirect_to root_path, notice: "You have successfully deleted your shop profile"
   end
 
   private
