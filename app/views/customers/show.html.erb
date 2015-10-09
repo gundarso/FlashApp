@@ -22,9 +22,8 @@
             <h3>Categories of interest</h3>
             <strong>Categories:</strong><br>
             <% @customer.categories.each do |category| %>
-    <%= category.name %><br>
-    <% end %>
-
+            <%= category.name %><br>
+            <% end %>
         <% if customer_signed_in? %>
         <%= link_to 'Edit your profile details', edit_customer_path(@customer), class: "btn btn-primary" %>
         <% end %>
