@@ -1,6 +1,7 @@
 class SalesController < ApplicationController
-  before_action :authenticate_shop!, only: [:edit, :update, :destroy]
-  before_action :find_sale, exception: [:index]
+  before_action :authenticate_shop!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :find_shop
+  before_action :find_sale, only: [:show, :edit, :update, :destroy]
 
   def index
   end
@@ -9,12 +10,10 @@ class SalesController < ApplicationController
   end
 
   def new
-    @shop = Shop.find(params[:shop_id])
     @sale = Sale.new
   end
 
   def create
-    @shop = Shop.find(params[:shop_id])
     @sale = @shop.sales.build(sale_params)
     if @sale.save
      redirect_to shop_sales_path(@shop), notice: 'Sale was successfully added'
@@ -30,7 +29,6 @@ class SalesController < ApplicationController
   end
 
   def destroy
-    @shop = Shop.find(params[:shop_id])
     @sale.destroy
     redirect_to shop_sales_path(@shop), notice: "You have just destroyed a dose"
   end
@@ -38,11 +36,15 @@ class SalesController < ApplicationController
   private
 
   def sale_params
-    params.require(:sale).permit
+    params.require(:sale).permit(:product_name, :product_description, :product_quantity, :picture, :price, :terms, :starting, :ending, :category_id, :shop_id)
   end
 
   def find_sale
     @sale = Sale.find(params[:id])
+  end
+
+   def find_shop
+    @shop = Shop.find(params[:shop_id])
   end
 
 end
