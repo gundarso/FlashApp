@@ -2,9 +2,10 @@
 <div class="container text-center">
 <h1>Shop details</h1>
   <strong>Name:</strong> <%= @shop.name %><br>
+  <strong>Categories:</strong>
   <ul>
     <% @shop.categories.each do |category| %>
-    <li><strong>Categories:</strong><%= @shop.category.name %><li>
+    <li><%= category.name %></li>
     <% end %>
   </ul>
   <strong>Street address:</strong> <%= @shop.street_address %><br>
