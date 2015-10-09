@@ -3,11 +3,11 @@
 <div class="col-lg-12 text-center padding-top col-lg-12">
     <div class="card hovercard">
         <div class="card-background">
-            <img class="card-bkimg" alt="" src="http://lorempixel.com/100/100/people/9/">
+            <img class="card-bkimg" alt="" src="https://images.unsplash.com/photo-1430375642086-147fcd5fea57?q=80&fm=jpg&s=1cebba51d8f877740ad9ebb7c5861109">
             <!-- http://lorempixel.com/850/280/people/9/ -->
         </div>
         <div class="useravatar">
-            <%#= image_tag @customer.picture.url(:medium) %>
+            <%= image_tag @customer.picture.url(:medium) %>
         </div>
         <div class="card-info"> <span class="card-title"><%= @customer.first_name %></span>
 
@@ -20,12 +20,11 @@
             <strong>Age:</strong> <%= @customer.age %><br>
             <strong>Base location:</strong> <%= @customer.base_location %><br>
             <h3>Categories of interest</h3>
-            <ul>
+            <strong>Categories:</strong><br>
             <% @customer.categories.each do |category| %>
-    <li><strong>Categories:</strong><%= @customer.category.name %><li>
+    <%= category.name %><br>
     <% end %>
-            </ul>
-        <h3>Edit your profile here</h3>
+
         <% if customer_signed_in? %>
         <%= link_to 'Edit your profile details', edit_customer_path(@customer), class: "btn btn-primary" %>
         <% end %>
