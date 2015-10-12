@@ -16,11 +16,12 @@
   <strong>Contact email:</strong> <%= @shop.contact_email %><br>
 
 <%= image_tag @sale.picture.url(:medium) %><br>
+<%= link_to 'Back to shop sales list', shop_sales_path(@shop), class: "btn btn-primary" %>
 
 <% if shop_signed_in? && current_shop == @shop %>
 <%= link_to 'Edit sale details', edit_shop_sale_path(@shop, @sale), class: "btn btn-primary" %>
+<%= link_to 'Delete this sale', shop_sale_path(@shop, @sale), method: :delete, data: {confirm: "Do you really wish to delete this sale?"}, class: "btn btn-primary" %>
 <% end %>
        </div>
       </div>
-    </div>
-  </div>
+

@@ -22,7 +22,7 @@ class SalesController < ApplicationController
   def create
     @sale = @shop.sales.build(sale_params)
     if @sale.save
-     redirect_to shop_sales_path(@shop), notice: 'Sale was successfully added'
+     redirect_to shop_sales_path(@shop), notice: 'The sale was successfully added'
     else
       render :new
     end
@@ -32,11 +32,16 @@ class SalesController < ApplicationController
   end
 
   def update
+    if @sale.save
+     redirect_to shop_sale_path(@shop, @sale), notice: 'The sale was successfully edited'
+    else
+      render :edit
+    end
   end
 
   def destroy
     @sale.destroy
-    redirect_to shop_sales_path(@shop), notice: "You have just destroyed a dose"
+    redirect_to shop_sales_path(@shop), notice: "The sale was successfully deleted"
   end
 
   private

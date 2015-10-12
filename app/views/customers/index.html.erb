@@ -1,0 +1,18 @@
+<div class="row">
+<div class="container text-center">
+<h1>The following sales are currently active near your base location: </h1>
+<% @shops.each do |shop| %>
+  <% shop.sales.each do |sale| %>
+     <strong>Shop:</strong> <%= shop.name %><br>
+    <strong>Product name:</strong> <%= sale.product_name %><br>
+    <strong>Price:</strong> <%= sale.price %><br>
+    <strong>Terms & conditions:</strong> <%= sale.terms %><br>
+    <strong>Sale starts at:</strong> <%= sale.starting %><br>
+    <strong>Sale ends at:</strong> <%= sale.ending %><br>
+
+    <%= image_tag sale.picture.url(:medium) %><br>
+    <%= link_to 'View sale details', shop_sale_path(shop, sale), class: "btn btn-primary" %><br><br><br>
+  <% end %>
+<% end %>
+       </div>
+      </div>

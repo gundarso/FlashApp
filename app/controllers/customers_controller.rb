@@ -1,6 +1,10 @@
 class CustomersController < ApplicationController
   before_action :authenticate_customer!
-  before_action :find_customer
+  before_action :find_customer, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @shops = Shop.all
+  end
 
   def show
     if current_customer == @customer
