@@ -1,12 +1,13 @@
 <div class="row">
 <div class="container text-center">
+<div class="changesbackground">
 <h1>Sale details</h1>
-  <strong>Shop:</strong> <%= @shop.name %><br>
+  <strong>Shops:</strong> <%= @shop.name %><br>
   <strong>Category:</strong> <%= @sale.category.name %><br>
   <strong>Product name:</strong> <%= @sale.product_name %><br>
   <strong>Product description:</strong> <%= @sale.product_description %><br>
   <strong>Product quantity:</strong> <%= @sale.product_quantity %><br>
-  <strong>Price:</strong> <%= @sale.price %><br>
+  <strong>Price:</strong><%= @sale.price %><br>
   <strong>Terms & conditions:</strong> <%= @sale.terms %><br>
   <strong>Sale starts at:</strong> <%= @sale.starting %><br>
   <strong>Sale ends at:</strong> <%= @sale.ending %><br>
@@ -24,4 +25,5 @@
 <% end %>
        </div>
       </div>
+    </div>
 
