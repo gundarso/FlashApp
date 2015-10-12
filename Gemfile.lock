@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.4)
       actionpack (= 4.2.4)
@@ -89,8 +90,10 @@ GEM
       thor (~> 0.14)
     font-awesome-sass (4.4.0)
       sass (>= 3.2)
+    geocoder (1.2.9)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     i18n (0.7.0)
     i18n_data (0.7.0)
     jbuilder (2.3.2)
@@ -145,6 +148,7 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.4)
       sprockets-rails
+    rails-assets-underscore (1.8.3)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.7)
@@ -206,8 +210,6 @@ GEM
     tilt (2.0.1)
     traco (3.1.6)
       activerecord (>= 3.0)
-    turbolinks (2.5.3)
-      coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     uglifier (2.7.2)
@@ -236,6 +238,8 @@ DEPENDENCIES
   devise-i18n-views
   figaro
   font-awesome-sass
+  geocoder
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   mailcatcher
@@ -243,13 +247,13 @@ DEPENDENCIES
   pg
   puma
   rails (= 4.2.4)
+  rails-assets-underscore!
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form
   spring
   traco
-  turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
 

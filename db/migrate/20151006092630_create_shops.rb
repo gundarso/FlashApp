@@ -7,7 +7,7 @@ class CreateShops < ActiveRecord::Migration
       t.datetime :closing
       t.string :phone
       t.string :email
-      t.float :latitute
+      t.float :latitude
       t.float :longitude
 
       t.timestamps null: false

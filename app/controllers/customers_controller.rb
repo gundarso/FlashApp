@@ -4,6 +4,12 @@ class CustomersController < ApplicationController
 
   def index
     @shops = Shop.all
+
+    # Let's DYNAMICALLY build the markers for the view.
+    @markers = Gmaps4rails.build_markers(@sales) do |sale, marker|
+      marker.lat sale.shop.latitude
+      marker.lng sale.shop.longitude
+  end
   end
 
   def show
