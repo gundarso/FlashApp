@@ -26,7 +26,7 @@ class SalesController < ApplicationController
   end
 
   def update
-    if @sale.save
+    if @sale.update(sale_params)
      redirect_to shop_sale_path(@shop, @sale), notice: 'The sale was successfully edited'
     else
       render :edit

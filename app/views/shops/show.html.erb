@@ -7,7 +7,11 @@
             <!-- http://lorempixel.com/850/280/people/9/ -->
         </div>
         <div class="useravatar">
-            <%= image_tag @shop.picture.url(:medium) %>
+          <% if @shop.picture.present? %>
+            <%= image_tag @shop.picture.url(:thumb) %>
+          <% else %>
+            <%= image_tag ("GetNGo1.png"), :thumb %>
+          <% end %>
         </div>
         <div class="card-info"> <span class="card-title"><%= @shop.name %></span>
 
@@ -27,10 +31,11 @@
         <strong>City:</strong> <%= @shop.city %><br>
         <strong>Postcode:</strong> <%= @shop.postcode %><br>
         <strong>Country:</strong> <%= @shop.country %><br>
-        <strong>Opening time:</strong> <%= @shop.opening %><br>
-        <strong>Closing time:</strong> <%= @shop.closing %><br>
         <strong>Phone:</strong> <%= @shop.phone %><br>
         <strong>Contact email:</strong> <%= @shop.contact_email %><br>
+        <!-- <div class='shop_map', width: 50px, height: 40px >
+        <%= image_tag #'//maps.google.com/?q=#{@shop.address}' %>
+        </div> -->
 
 <% if shop_signed_in? %>
 <%= link_to 'Edit your shop details', edit_shop_path(@shop), class: "btn btn-primary" %>
