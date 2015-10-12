@@ -7,7 +7,7 @@
           <% if @shop.picture.present? %>
             <%= image_tag @shop.picture.url(:thumb) %>
           <% else %>
-            <%= image_tag ("GetNGo1.png"), :thumb %>
+            <%= image_tag ("GetNGo1.png") %>
           <% end %>
         </div>
         <div class="card-info"> <span class="card-title"><%= @shop.name %></span>
