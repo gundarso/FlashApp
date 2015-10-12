@@ -7,8 +7,8 @@ class SalesController < ApplicationController
   end
 
   def show
-    @car = Sale.find(params[:id])
-    @car_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
+    @sale = Sale.find(params[:id])
+    @shop_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
   end
 
   def new
