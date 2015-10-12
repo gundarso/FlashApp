@@ -25,6 +25,8 @@ gem 'bootstrap-sass'
 
 gem "gmaps4rails"
 
+gem "geocoder"
+
 gem 'font-awesome-sass'
 
 gem 'simple_form'

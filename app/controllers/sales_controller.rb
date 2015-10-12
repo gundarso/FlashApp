@@ -4,15 +4,11 @@ class SalesController < ApplicationController
   before_action :find_sale, only: [:show, :edit, :update, :destroy]
 
   def index
-    @sales = Sale.all
-
-    # Let's DYNAMICALLY build the markers for the view.
-    @markers = Gmaps4rails.build_markers(@sales) do |sale, marker|
-      marker.lat sale.latitude
-      marker.lng sale.longitude
   end
 
   def show
+    @car = Sale.find(params[:id])
+    @car_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
   end
 
   def new

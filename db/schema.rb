@@ -102,7 +102,7 @@ ActiveRecord::Schema.define(version: 20151009115125) do
     t.datetime "closing"
     t.string   "phone"
     t.string   "contact_email"
-    t.float    "latitute"
+    t.float    "latitude"
     t.float    "longitude"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false

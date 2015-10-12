@@ -3,7 +3,7 @@ class ShopsController < ApplicationController
   before_action :find_shop
 
   def show
-    #@shop_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
+    @shop_coordinates = { lat: @shop.latitude, lng: @shop.longitude }
   end
 
   def edit
@@ -35,6 +35,10 @@ class ShopsController < ApplicationController
 
   def find_shop
    @shop = Shop.find(params[:id])
+  end
+
+  def address
+  @address = @street_address + ', ' + @city
   end
 
 end
