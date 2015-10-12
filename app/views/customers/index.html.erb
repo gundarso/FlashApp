@@ -7,24 +7,23 @@
               <div class="caption">
       <% @shops.each do |shop| %>
       <% shop.sales.each do |sale| %>
-                <% if shop.picture.present? %>1
-                <p><%= image_tag shop.picture.url(:thumb) %></p>
-              <% else %>
-                <p><%= image_tag ("GetNGo1.png"), height: '65', width: '100' %></p>
-              <% end %>
+        <% if sale.picture.present? %>1
+          <p><%= image_tag sale.picture.url(:thumb) %></p>
+        <% else %>
+          <p><%= image_tag shop.picture.url(:thumb) %></p>
+        <% end %>
     <p><strong>Shop:</strong> <%= shop.name %></p>
     <p><strong>Product name:</strong> <%= sale.product_name %></p>
     <p><strong>Price:</strong> <%= sale.price %></p>
     <p><strong>Terms & conditions:</strong> <%= sale.terms %></p>
     <p><strong>Sale starts at:</strong> <%= sale.starting %></p>
     <p><strong>Sale ends at:</strong> <%= sale.ending %></p>
-                <p class="text-center">
-    <%= image_tag sale.picture.url(:medium) %><br>
+    <p class="text-center">
     <%= link_to 'View sale details', shop_sale_path(shop, sale), class: "btn btn-primary" %><br><br><br>
     <% end %>
     <% end %>
 
-                </p>
+    </p>
               </div>
             </div>
           </div>
@@ -34,8 +33,8 @@
     <div class="col-xs-12 col-md-6 xs-padded">
       <!-- placeholder for the map -->
       <div id="map" class="thumbnail" style="width: 100%; height: 600px;"></div>
-    </div
->  </div>
+    </div>
+  </div>
 </div>
 
 <% content_for(:after_js) do %>
@@ -50,5 +49,3 @@
    })
  <% end %>
 <% end %>
-
-

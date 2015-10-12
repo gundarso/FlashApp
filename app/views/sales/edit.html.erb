@@ -1,4 +1,5 @@
 <h1>Edit your sale</h1>
+<div class="changesbackground">
 
 <%= simple_form_for [@shop, @sale] do |f| %>
   <%= f.error_notification %>
@@ -13,10 +14,10 @@
             <%= f.input :product_description %>
             <%= f.input :product_quantity %>
             <%= f.input :picture %>
-            <%= f.input :price %>
+            <%= f.input :price, as: :currency %>
             <%= f.input :terms %>
-            <%= f.input :starting %>
-            <%= f.input :ending %>
+            <%= f.input :starting, as: :time %>
+            <%= f.input :ending, as: :time %>
           </div>
         </div>
       </div>
@@ -27,4 +28,5 @@
       <%= f.button :submit %>
     </div>
   </div>
+</div>
 <% end %>_
