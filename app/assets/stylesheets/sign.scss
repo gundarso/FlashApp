@@ -13,8 +13,17 @@
 }
 
 .backgroundgrey {
-  background-image: url("grey.jpg");
+  background-image: image-url("grey.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
+
+.backgroundblack {
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+

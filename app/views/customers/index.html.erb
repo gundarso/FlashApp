@@ -1,6 +1,8 @@
-<div class="container">
+  <div class="container-fuid">
   <div class="row text-center">
     <h1>Today we bring the following sales near you</h1>
+  <br>
+  <br>
     <div class="col-xs-12 col-md-6 text-center">
           <div class="col-sm-6 col-md-6 xs-padded">
             <div class="thumbnail">
@@ -11,12 +13,12 @@
         <% else %>
           <p><%= image_tag sale.shop.picture.url(:thumb) %></p>
         <% end %>
-    <p><strong>Shop:</strong> <%= sale.shop.name %></p>
-    <p><strong>Product name:</strong> <%= sale.product_name %></p>
-    <p><strong>Price:</strong> <%= sale.price %></p>
-    <p><strong>Terms & conditions:</strong> <%= sale.terms %></p>
-    <p><strong>Sale starts at:</strong> <%= sale.starting %></p>
-    <p><strong>Sale ends at:</strong> <%= sale.ending %></p>
+      <%= sale.shop.name %>
+      <%= sale.product_name %>
+      <%= sale.price %>
+      <%= sale.terms %>
+      <%= sale.starting %>
+      <%= sale.ending %>
     <p class="text-center">
     <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %><br><br><br>
     <% end %>
@@ -28,11 +30,12 @@
     </div>
 
 
-    <div class="col-xs-12 col-md-6 xs-padded">
+    <div class="col-xs-12 col-md-6">
       <!-- placeholder for the map -->
       <div id="map" class="thumbnail" style="width: 100%; height: 600px;"></div>
     </div>
   </div>
+</div>
 </div>
 
 <% content_for(:after_js) do %>
@@ -47,3 +50,5 @@
    })
  <% end %>
 <% end %>
+
+
