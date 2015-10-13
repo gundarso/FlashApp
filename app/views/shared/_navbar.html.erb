@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top <%= "navbar-opaque" if customer_signed_in? || shop_signed_in? %>">
         <div class="container">
 
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -24,13 +24,7 @@
                         <span class="caret"></span>
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="drop2">
-                      <% if customer_signed_in? || shop_signed_in? %>
-                      <style>
-                        .navbar-default {
-                          padding: 0;
-                          background-color: black;
-                        }
-                      </style>
+                      <% if customer_signed_in? %>
                         <li><%= link_to "View profile", customer_path(current_customer) %></li>
                       <% else %>
                         <li><%= link_to "View profile", shop_path(current_shop) %></li>
