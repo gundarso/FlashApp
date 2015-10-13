@@ -14,4 +14,12 @@ class Shop < ActiveRecord::Base
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
+
+  geocoded_by :full_address
+  after_validation :geocode, if: :street_address_changed?
+
+  def full_address
+    street_address + ' ' + postcode + ' ' + city
+  end
+
 end

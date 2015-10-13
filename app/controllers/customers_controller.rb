@@ -3,8 +3,9 @@ class CustomersController < ApplicationController
   before_action :find_customer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @shops = Shop.all
-
+    @customer = current_customer
+    @sales = Sale.all
+    @shops = Shop.near(@customer.base_location, 50) #&& Shop.where('@sale.category = ?', @customer.category_ids)
     # Let's DYNAMICALLY build the markers for the view.
     @markers = Gmaps4rails.build_markers(@shops.select(&:latitude)) do |shop, marker|
       marker.lat shop.latitude
@@ -50,5 +51,6 @@ class CustomersController < ApplicationController
   def find_customer
     @customer = Customer.find(params[:id])
   end
+
 end
 
