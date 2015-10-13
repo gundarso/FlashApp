@@ -5,9 +5,6 @@ class Shop < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
-  geocoded_by :street_address
-  after_validation :geocode, if: :street_address_changed?
-
 
   has_attached_file :picture,
     styles: { medium: "300x300>", thumb: "100x100>" }
