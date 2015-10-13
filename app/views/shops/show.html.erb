@@ -28,6 +28,7 @@
         <strong>Country:</strong> <%= @shop.country %><br>
         <strong>Phone:</strong> <%= @shop.phone %><br>
         <strong>Contact email:</strong> <%= @shop.contact_email %><br>
+        <%#= image_tag 'http://maps.googleapis.com/maps/api/staticmap?center=@shop.full_address&zoom=13&scale=false&size=400x300&maptype=roadmap&format=png&visual_refresh=true' %><br>
 
 <% if shop_signed_in? %>
 <%= link_to 'Edit your shop details', edit_shop_path(@shop), class: "btn btn-primary" %>
