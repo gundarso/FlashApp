@@ -7,7 +7,7 @@ class CustomersController < ApplicationController
     @sales = Sale.all
     @shops = Shop.near(@customer.base_location, 50) #&& Shop.where('@sale.category = ?', @customer.category_ids)
     # Let's DYNAMICALLY build the markers for the view.
-    @markers = Gmaps4rails.build_markers(@shops) do |shop, marker|
+    @markers = Gmaps4rails.build_markers(@shops.select(&:latitude)) do |shop, marker|
       marker.lat shop.latitude
       marker.lng shop.longitude
     end
