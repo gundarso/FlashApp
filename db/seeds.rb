@@ -187,13 +187,13 @@ Shop.create(
 20.times do
 Sale.create(
   category_id: rand(1..9),
-  shop_id: rand(2..13),
-  product_name: (['shoes', 'scarf', 'sandwich', 'YAMAHA amplifier', 'earrings', 'red roses', 'iPod']).max,
+  shop_id: rand(1..12),
+  product_name: ['shoes', 'scarf', 'sandwich', 'YAMAHA amplifier', 'earrings', 'red roses', 'iPod'].sample,
   product_quantity: rand(1..100),
-  price: (['35', '50', '256', '234', '53', '24', '276']).max,
-  terms: (['10% off', '30% off', 'sandwich', '40% off', '20% off', '2 + 1', '70% off']).max,
+  price: ['35', '50', '256', '234', '53', '24', '276'].sample,
+  terms: ['10% off', '30% off', '40% off', '20% off', '2 + 1', '70% off'].sample,
   starting: Time.now,
-  ending: Time.now + rand(1..5)
+  ending: Time.now + rand(3600..18000)
   )
 end
 

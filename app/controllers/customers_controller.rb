@@ -4,8 +4,8 @@ class CustomersController < ApplicationController
 
   def index
     @customer = current_customer
-    @shops = Shop.near(@customer.base_location, 50)
-    @sales = Sale.where(@customer.categories.include?(:category_id))
+    @shops = Shop.near(@customer.base_location, 10)
+    @sales = Sale.where(category: @customer.categories)
 
     @sales = @sales.select { |sale| @shops.include?(sale.shop)}
     # Let's DYNAMICALLY build the markers for the view.
