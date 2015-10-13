@@ -37,10 +37,4 @@ class ShopsController < ApplicationController
    @shop = Shop.find(params[:id])
   end
 
-=begin
-def address
-    @address = @street_address + ', ' + @city
-  end
-=end
-
 end
