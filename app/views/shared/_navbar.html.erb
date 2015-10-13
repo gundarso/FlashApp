@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                 <%= link_to image_tag("GetNGo1.png", :alt => "image", width:"115", class: "navbar-brand page-scroll"), root_path %>
+                 <%= link_to image_tag("GetNGo1.png", :alt => "image", width:"130", class: "navbar-brand page-scroll"), root_path %>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -25,6 +25,12 @@
                       </a>
                       <ul class="dropdown-menu" aria-labelledby="drop2">
                       <% if customer_signed_in? %>
+                      <style>
+                        .navbar-default {
+                          padding: 0;
+                          background-color: black;
+                        }
+                      </style>
                         <li><%= link_to "View profile", customer_path(current_customer) %></li>
                       <% else %>
                         <li><%= link_to "View profile", shop_path(current_shop) %></li>
