@@ -9,7 +9,7 @@ class CustomersController < ApplicationController
 
     @sales = @sales.select { |sale| @shops.include?(sale.shop)}
     # Let's DYNAMICALLY build the markers for the view.
-    @markers = Gmaps4rails.build_markers(@shops) do |shop, marker|
+    @markers = Gmaps4rails.build_markers(@shops.select(&:latitude)) do |shop, marker|
       marker.lat shop.latitude
       marker.lng shop.longitude
     end
