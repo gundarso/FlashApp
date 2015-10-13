@@ -9,3 +9,7 @@
 <br><br>
 <% end %>
 <%= link_to 'Back to shop profile', shop_path(@shop), class: "btn btn-primary" %>
+
+<% if shop_signed_in? %>
+<%= link_to 'Add a new sale', new_shop_sale_path(@shop), class: "btn btn-primary" %>
+<% end %>
