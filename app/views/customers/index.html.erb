@@ -1,3 +1,4 @@
+<div class= "backgroundwhite">
 <div class="site-container">
   <div class="sidebar">
   <div class="search-product-container">
@@ -12,7 +13,7 @@
         <div class="card-product">
           <% if sale.picture.present? %>
             <p>
-              <%= image_tag sale.picture.url(:thumb) %>
+              <%= image_tag sale.picture.url, class: "pictureindex" %>
             </p>
           <% elsif sale.shop.picture.present? %>
             <p>
@@ -35,6 +36,7 @@
     <div id="map" class="thumbnail" style="width: 100%; height: 100%;"></div>
   </div>
 </div>
+</div>
 
 <% content_for(:after_js) do %>
  <%= javascript_tag do %>
@@ -46,5 +48,6 @@
        handler.fitMapToBounds();
      });
    })
+
  <% end %>
 <% end %>
