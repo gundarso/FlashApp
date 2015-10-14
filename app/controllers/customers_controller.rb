@@ -4,8 +4,10 @@ class CustomersController < ApplicationController
 
   def index
     @customer = current_customer
-    @shops = Shop.near(@customer.base_location, 10)
-    @sales = Sale.where(category: @customer.categories)
+    @categories = Category.all
+    @search = params.fetch(:query, {})
+    @shops = Shop.near(@search.fetch(:base_location, @customer.base_location), 10)
+    @sales = Sale.where(category: @search.fetch(:category, @customer.categories))
 
     @sales = @sales.select { |sale| @shops.include?(sale.shop)}
     # Let's DYNAMICALLY build the markers for the view.
@@ -54,11 +56,5 @@ class CustomersController < ApplicationController
     @customer = Customer.find(params[:id])
   end
 
-  def query
-    @search = Rule.search do
-    fulltext params[:search]
-    end
-    @rules = @search.results
-  end
 end
 
