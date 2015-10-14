@@ -15,7 +15,8 @@
           <p><strong>Product:</strong><%= sale.product_name %></p>
           <p><strong>Price:</strong><%= sale.price %></p>
           <p><strong>Terms:</strong><%= sale.terms %></p>
-          <p><strong>Sale ends at:</strong><%= sale.ending %></p>
+          <p><strong>Sale starts at:</strong><%= sale.starting.strftime("%H:%M") %></p>
+          <p><strong>Sale ends at:</strong><%= sale.ending.strftime("%H:%M") %></p>
         <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
       </div>
     </div>
