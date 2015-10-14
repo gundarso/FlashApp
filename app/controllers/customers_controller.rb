@@ -11,10 +11,10 @@ class CustomersController < ApplicationController
 
     @sales = @sales.select { |sale| @shops.include?(sale.shop)}
     # Let's DYNAMICALLY build the markers for the view.
-    @markers = Gmaps4rails.build_markers(@sales) do |sale, marker| @shops.select(&:latitude)
+    @markers = Gmaps4rails.build_markers(@sales) do |sale, marker|
       marker.lat sale.shop.latitude
       marker.lng sale.shop.longitude
-      marker.infowindow sale.shop.name
+      marker.infowindow render_to_string partial: "customers/card_map", locals: { shop: sale.shop  }
     end
   end
 

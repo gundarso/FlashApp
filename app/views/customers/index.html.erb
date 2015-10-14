@@ -1,3 +1,4 @@
+<div class= "backgroundwhite">
 <div class="site-container">
   <div class="sidebar">
   <div class="search-product-container">
@@ -12,33 +13,13 @@
   <% end %>
   </div>
     <% @sales.each do |sale| %>
-      <div class="card-product-container">
-        <div class="card-product">
-          <% if sale.picture.present? %>
-            <p>
-              <%= image_tag sale.picture.url(:thumb) %>
-            </p>
-          <% elsif sale.shop.picture.present? %>
-            <p>
-              <%= image_tag sale.shop.picture.url(:thumb) %>
-            </p>
-          <% else %>
-            <p><%= image_tag("GetNGo1.png", width: '35%') %></p>
-          <% end %>
-          <p><strong>Shop: </strong><%= sale.shop.name %></p>
-          <p><strong>Product: </strong><%= sale.product_name %></p>
-          <p><strong>Price: </strong><%= sale.price %> EUR</p>
-          <p><strong>Terms: </strong><%= sale.terms %></p>
-          <p><strong>Sale starts at: </strong><%= sale.starting.strftime("%H:%M") %></p>
-          <p><strong>Sale ends at: </strong><%= sale.ending.strftime("%H:%M") %></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
-      </div>
-    </div>
+    <%= render partial: "card_product", locals: { sale: sale } %>
     <% end %>
   </div>
   <div class="map-container">
     <div id="map" class="thumbnail" style="width: 100%; height: 100%;"></div>
   </div>
+</div>
 </div>
 
 <% content_for(:after_js) do %>
@@ -51,5 +32,6 @@
        handler.fitMapToBounds();
      });
    })
+
  <% end %>
 <% end %>
