@@ -14,6 +14,7 @@ class CustomersController < ApplicationController
     @markers = Gmaps4rails.build_markers(@sales) do |sale, marker| @shops.select(&:latitude)
       marker.lat sale.shop.latitude
       marker.lng sale.shop.longitude
+      marker.infowindow sale.shop.name
     end
   end
 
