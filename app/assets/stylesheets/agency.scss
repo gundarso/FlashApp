@@ -208,6 +208,11 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
 }
 
+.navbar-opaque{
+    padding: 0!important;
+    background-color: #222 !important;
+}
+
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
