@@ -6,4 +6,8 @@ class Sale < ActiveRecord::Base
 
   validates_attachment_content_type :picture,
     content_type: /\Aimage\/.*\z/
+
+  scope :active_sales, -> { where('ending > ?', Time.now) }
+
 end
+

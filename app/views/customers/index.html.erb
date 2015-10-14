@@ -5,8 +5,12 @@
   <%= form_tag customers_path, method: :get do %>
   <%= label_tag 'Enter your search location:' %>
   <%= text_field_tag 'query[base_location]', @search[:base_location], :value => @customer.base_location %><br>
-  <% end %>
+    <% @categories.each do |category| %>
+    <%= check_box_tag 'query[category][]', category.id, @customer.category_ids.include?(category.id) ? true : false %>
+    <%= category.name %><br>
+    <% end %>
   <%= submit_tag 'Find your sale!', class: "btn btn-primary" %>
+  <% end %>
   </div>
     <% @sales.each do |sale| %>
     <%= render partial: "card_product", locals: { sale: sale } %>
