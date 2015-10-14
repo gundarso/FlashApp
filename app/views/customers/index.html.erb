@@ -3,19 +3,21 @@
 <div class="text-center padding-top">
   <div class="container-fuid text-center">
   <div class="row text-center">
-    <h1>Today we bring the following sales near you</h1>
+        <%= render partial: 'search_bar' %>
+    <h1>Active sales in your preferred categories near your location:</h1>
   <br>
-    <%= render partial: 'search_bar' %>
   <br>
     <div class="col-xs-12 col-md-6 text-center">
           <div class="col-sm-6 col-md-6 xs-padded">
             <div class="thumbnail">
               <div class="caption">
       <% @sales.each do |sale| %>
-        <% if sale.picture.present? %>1
+        <% if sale.picture.present? %>
           <p><%= image_tag sale.picture.url(:thumb) %></p>
-        <% else %>
+        <% elsif sale.shop.picture.present? %>
           <p><%= image_tag sale.shop.picture.url(:thumb) %></p>
+        <% else %>
+          <p><%= image_tag("GetNGo1.png", width: '35%') %></p>
         <% end %>
       <p><strong>Shop:</strong><%= sale.shop.name %></p>
       <p><strong>Category:</strong><%= sale.category.name %></p>
