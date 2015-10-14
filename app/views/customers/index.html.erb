@@ -1,3 +1,4 @@
+<div class= "backgroundwhite">
 <div class="site-container">
   <div class="sidebar">
   <div class="search-product-container">
@@ -15,6 +16,7 @@
     <div id="map" class="thumbnail" style="width: 100%; height: 100%;"></div>
   </div>
 </div>
+</div>
 
 <% content_for(:after_js) do %>
  <%= javascript_tag do %>
@@ -26,5 +28,6 @@
        handler.fitMapToBounds();
      });
    })
+
  <% end %>
 <% end %>

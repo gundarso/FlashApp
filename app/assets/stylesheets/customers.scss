@@ -22,8 +22,14 @@
     overflow: hidden;
     text-align: center;
     background-color: #fff;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 50px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+.pictureindex {
+  width:140px;
+}
+
 .card.hovercard .card-background {
     height: 130px;
 }
@@ -39,7 +45,7 @@
 }
 .card.hovercard .card-info .card-title {
     padding:0 5px;
-    font-size: 20px;
+    font-size: 35px;
     line-height: 1;
     color: #262626;
     background-color: rgba(255, 255, 255, 0.1);
@@ -49,10 +55,11 @@
 }
 .card.hovercard .card-info {
     overflow: hidden;
-    font-size: 12px;
-    line-height: 20px;
-    color: #737373;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #333;
     text-overflow: ellipsis;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .card.hovercard .bottom {
     padding: 0 20px;
