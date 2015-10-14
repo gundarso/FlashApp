@@ -30,8 +30,6 @@
 
 <% if @sale.picture.present? %>
   <%= image_tag @sale.picture.url(:thumb) %>
-<% else %>
-  <%= image_tag @shop.picture.url(:thumb) %>
 <% end %><br>
 
 <% if shop_signed_in? && current_shop == @shop %>
