@@ -9,27 +9,7 @@
   <%= submit_tag 'Find your sale!', class: "btn btn-primary" %>
   </div>
     <% @sales.each do |sale| %>
-      <div class="card-product-container">
-        <div class="card-product">
-          <% if sale.picture.present? %>
-            <p>
-              <%= image_tag sale.picture.url, class: "pictureindex" %>
-            </p>
-          <% elsif sale.shop.picture.present? %>
-            <p>
-              <%= image_tag sale.shop.picture.url(:thumb) %>
-            </p>
-          <% else %>
-            <p><%= image_tag("GetNGo1.png", width: '35%') %></p>
-          <% end %>
-          <p><strong>Shop:</strong><%= sale.shop.name %></p>
-          <p><strong>Product:</strong><%= sale.product_name %></p>
-          <p><strong>Price:</strong><%= sale.price %></p>
-          <p><strong>Terms:</strong><%= sale.terms %></p>
-          <p><strong>Sale ends at:</strong><%= sale.ending %></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
-      </div>
-    </div>
+    <%= render partial: "card_product", locals: { sale: sale } %>
     <% end %>
   </div>
   <div class="map-container">
