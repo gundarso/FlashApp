@@ -3,6 +3,7 @@
 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2
  text-center padding-top">
     <div class="card hovercard">
+
         <div class="useravatar">
           <% if @shop.picture.present? %>
             <%= image_tag @shop.picture.url(:thumb) %>
@@ -14,19 +15,19 @@
 
 
 <h1>Sale details</h1>
-  <strong>Shops:</strong> <%= @shop.name %><br>
-  <strong>Category:</strong> <%= @sale.category.name %><br>
-  <strong>Product name:</strong> <%= @sale.product_name %><br>
-  <strong>Product description:</strong> <%= @sale.product_description %><br>
-  <strong>Product quantity:</strong> <%= @sale.product_quantity %><br>
-  <strong>Price:</strong><%= @sale.price %><br>
-  <strong>Terms & conditions:</strong> <%= @sale.terms %><br>
-  <strong>Sale starts at:</strong> <%= @sale.starting %><br>
-  <strong>Sale ends at:</strong> <%= @sale.ending %><br>
-  <strong>Street address:</strong> <%= @shop.street_address %><br>
-  <strong>City:</strong> <%= @shop.city %><br>
-  <strong>Phone:</strong> <%= @shop.phone %><br>
-  <strong>Contact email:</strong> <%= @shop.contact_email %><br>
+  <strong>Shops: </strong> <%= @shop.name %><br>
+  <strong>Category: </strong> <%= @sale.category.name %><br>
+  <strong>Product name: </strong> <%= @sale.product_name %><br>
+  <strong>Product description: </strong> <%= @sale.product_description %><br>
+  <strong>Product quantity: </strong> <%= @sale.product_quantity %><br>
+  <strong>Price: </strong><%= @sale.price %> EUR<br>
+  <strong>Terms & conditions: </strong> <%= @sale.terms %><br>
+  <strong>Sale starts at: </strong> <%= @sale.starting %><br>
+  <strong>Sale ends at: </strong> <%= @sale.ending %><br>
+  <strong>Street address: </strong> <%= @shop.street_address %><br>
+  <strong>City: </strong> <%= @shop.city %><br>
+  <strong>Phone: </strong> <%= @shop.phone %><br>
+  <strong>Contact email: </strong> <%= @shop.contact_email %><br>
 
 <% if @sale.picture.present? %>
   <%= image_tag @sale.picture.url(:thumb) %>
@@ -37,7 +38,7 @@
 <%= link_to 'Edit sale details', edit_shop_sale_path(@shop, @sale), class: "btn btn-primary" %>
 <%= link_to 'Delete this sale', shop_sale_path(@shop, @sale), method: :delete, data: {confirm: "Do you really wish to delete this sale?"}, class: "btn btn-primary" %>
 <% else %>
-<%= link_to 'Back to your sales list', customers_path, class: "btn btn-primary" %>
+<%= link_to 'Back to your sales list', :back, class: "btn btn-primary" %>
 <% end %>
        </div>
       </div>

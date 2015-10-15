@@ -1,10 +1,22 @@
 <%= form_tag customers_path, method: :get do %>
+  <div class="welll no-margin-bottom">
   <%= label_tag 'Enter your search location:' %>
-  <%= text_field_tag 'query[base_location]', @search[:base_location], :value => @customer.base_location %><br>
-    <% @categories.each do |category| %>
+  <%= text_field_tag 'query[base_location]', @search[:base_location], :value => @customer.base_location %><%= submit_tag 'Find my sale', class: "btn btn-primary" %><br>
+    <% counter = 0 %>
+    </div>
+    <div class="welll no-margin-bottom">
+       <div> <%= label_tag 'Chose a category:' %></div>
+        <% @categories.each do |category| %>
     <%= check_box_tag 'query[category][]', category.id, @customer.category_ids.include?(category.id) ? true : false %>
-    <%= category.name %><br>
-    <% end %>
-  <%= submit_tag 'Find your sale!', class: "btn btn-primary" %>
+    <% counter += 1 %>
+      <% if counter == 3 %>
+        <%= category.name %><br>
+      <% elsif counter == 6 %>
+        <%= category.name %><br>
+      <% else %>
+        <%= category.name %>
+      <% end %>
+    <% end %><br>
 <% end %>
+</div>
 
