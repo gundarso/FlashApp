@@ -10,10 +10,13 @@ class Customer < ActiveRecord::Base
   validates_attachment_content_type :picture,
   content_type: /\Aimage\/.*\z/
 
+=begin
   validates :first_name, presence: true
   validates :family_name, presence: true
   validates :birth_year, presence: true
   validates :gender, presence: true
   validates :base_location, presence: true
   validates :category_ids, presence: true
+=end
+
 end

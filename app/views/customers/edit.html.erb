@@ -4,8 +4,11 @@
  text-center padding-top">
      <div class="card hovercard">
         <div class="useravatar">
-            <%= image_tag @customer.picture.url(:medium) %>
-        </div>
+            <% if @customer.picture.present? %>
+              <%= image_tag @customer.picture.url(:thumb) %>
+            <% else %>
+              <%= image_tag ("GetNGo1.png") %>
+            <% end %>        </div>
 
 
 <div class="row">
@@ -27,7 +30,7 @@
             <%= f.input :first_name %>
             <%= f.input :family_name %>
             <%= f.input :birth_year %>
-            <%= f.input :gender %>
+            <%= f.input :gender, as: :check_boxes, collection: ['Male', 'Female'] %>
             <%= f.input :base_location %>
             <%= f.association :categories, as: :check_boxes, label: "Categories of interest"%>
             <%= f.input :picture %>

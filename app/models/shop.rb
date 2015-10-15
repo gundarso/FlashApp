@@ -15,6 +15,7 @@ class Shop < ActiveRecord::Base
   geocoded_by :full_address
   after_validation :geocode, if: :street_address_changed?
 
+=begin
   validates :name, presence: true
   validates :street_address, presence: true
   validates :city, presence: true
@@ -23,6 +24,7 @@ class Shop < ActiveRecord::Base
   validates :phone, presence: true
   validates :contact_email, presence: true
   validates :category_ids, presence: true
+=end
 
   def full_address
     street_address + ' ' + postcode + ' ' + city
