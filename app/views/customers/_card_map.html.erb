@@ -1,7 +1,7 @@
 
 
-<div class="card-product-container">
-        <div class="card-product">
+<div class="card-map-container">
+        <div class="card-map">
         <h1><%= shop.name %></h1>
         <h4><%= shop.street_address %></h4>
           <%# if shop.picture.present? %>
@@ -11,7 +11,7 @@
 
           <% shop.sales.each do |sale| %>
           <p><strong>Product in sale: </strong><%= sale.product_name %> <strong>for</strong> <%= sale.price %> € <strong>Terms:</strong> <%= sale.terms %></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
+        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-danger" %>
         <% end %>
       </div>
     </div>
