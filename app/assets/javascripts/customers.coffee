@@ -17,3 +17,4 @@ class InfoBoxBuilder extends Gmaps.Google.Builders.Marker # inherit from base bu
       width: "280px"
 
 handler = Gmaps.build 'Google', { builders: { Marker: InfoBoxBuilder} }
+
