@@ -5,7 +5,7 @@
     <% counter = 0 %>
     </div>
     <div class="welll no-margin-bottom">
-       <div> <%= label_tag 'Chose a category:' %></div>
+       <div> <%= label_tag 'Choose a category:' %></div>
         <% @categories.each do |category| %>
     <%= check_box_tag 'query[category][]', category.id, @customer.category_ids.include?(category.id) ? true : false %>
     <% counter += 1 %>
