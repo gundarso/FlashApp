@@ -1,10 +1,9 @@
  <div class="card-product-container">
         <div class="card-product">
-          <% if sale.picture.present? %>
-              <%= image_tag sale.picture.url(:thumb) %>
-            </p>
-          <% else sale.shop.picture.present? %>
-          <% end %>
+       <div class="carte-thumbnail">
+
+
+       </div>
           <h1><%= sale.shop.name %></h1>
           <h4><%= sale.product_name %></h4></p>
           <p><strong><%= sale.price %>€</strong></p>
