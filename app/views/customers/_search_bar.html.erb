@@ -1,11 +1,11 @@
 <%= form_tag customers_path, method: :get do %>
   <div class="welll no-margin-bottom">
   <%= label_tag 'Enter your search location:' %>
-  <%= text_field_tag 'query[base_location]', @search[:base_location], :value => @customer.base_location %><%= submit_tag 'Find my sale', class: "btn btn-primary" %><br>
+  <%= text_field_tag 'query[base_location]', @search[:base_location], :value => @customer.base_location %><%= submit_tag 'Find my sale', class: "btn btn-primary-margin" %><br>
     <% counter = 0 %>
     </div>
     <div class="welll no-margin-bottom">
-       <div> <%= label_tag 'Chose a category:' %></div>
+       <div> <%= label_tag 'Choose a category:' %></div>
         <% @categories.each do |category| %>
     <%= check_box_tag 'query[category][]', category.id, @customer.category_ids.include?(category.id) ? true : false %>
     <% counter += 1 %>
