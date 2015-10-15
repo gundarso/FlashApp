@@ -15,16 +15,14 @@ class Shop < ActiveRecord::Base
   geocoded_by :full_address
   after_validation :geocode, if: :street_address_changed?
 
-=begin
-  validates :name, presence: true
-  validates :street_address, presence: true
-  validates :city, presence: true
-  validates :postcode, presence: true
-  validates :country, presence: true
-  validates :phone, presence: true
-  validates :contact_email, presence: true
-  validates :category_ids, presence: true
-=end
+  #validates :name, presence: true
+  #validates :street_address, presence: true
+  #validates :city, presence: true
+  #validates :postcode, presence: true
+  #validates :country, presence: true
+  #validates :phone, presence: true
+  #validates :contact_email, presence: true
+  #validates :category_ids, presence: true
 
   def full_address
     street_address + ' ' + postcode + ' ' + city

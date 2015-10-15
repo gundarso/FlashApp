@@ -1,22 +1,14 @@
  <div class="card-product-container">
         <div class="card-product">
           <% if sale.picture.present? %>
-            <p>
               <%= image_tag sale.picture.url(:thumb) %>
             </p>
-          <% elsif sale.shop.picture.present? %>
-            <p>
-              <%= image_tag sale.shop.picture.url(:thumb) %>
-            </p>
-          <% else %>
-            <p><%= image_tag("GetNGo1.png", width: '35%') %></p>
+          <% else sale.shop.picture.present? %>
           <% end %>
-          <p><strong>Shop: </strong><%= sale.shop.name %></p>
-          <p><strong>Product: </strong><%= sale.product_name %></p>
-          <p><strong>Price: </strong><%= sale.price %> EUR</p>
-          <p><strong>Terms: </strong><%= sale.terms %></p>
-          <p><strong>Sale starts at: </strong><%= sale.starting.strftime("%H:%M") %></p>
-          <p><strong>Sale ends at: </strong><%= sale.ending.strftime("%H:%M") %></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
+          <h1><%= sale.shop.name %></h1>
+          <h4><%= sale.product_name %></h4></p>
+          <p><strong><%= sale.price %>€</strong></p>
+          <p><strong><%= sale.terms %></strong></p>
+        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-danger" %>
       </div>
     </div>

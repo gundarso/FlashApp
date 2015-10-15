@@ -1,7 +1,7 @@
 .card-product {
   background: white;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.07);
-  background-color: #FEC503;
+  background-color: white;
 }
 
 .card-product-container {
@@ -9,6 +9,19 @@
   padding: 10px;
 }
 
+
 .search-product-container {
   flex: 0 0 100%;
+}
+
+.card-product-container h1,.card-product-container h4 {
+  padding-left: 20px;
+}
+
+.card-product-container p {
+  padding-left: 20px;
+}
+
+.btn {
+
 }
