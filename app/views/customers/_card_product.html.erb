@@ -2,12 +2,13 @@
 
   <%= link_to shop_sale_path(sale.shop, sale) do %>
     <div class="card-product">
-      <div class="card-product-thumbnail">
-        <% if sale.picture.present? %>
-          <%= image_tag sale.picture.url(:thumb) %>
+     <% if sale.picture.present? %>
+          <% image = image_url sale.picture.url %>
         <% else %>
-          <%= image_tag ("GetNGo1.png"), width:'35%' %>
+          <% image = image_url ("GetNGo1.png") %>
         <% end %>
+      <div class="card-product-thumbnail" style="background-image: url('<%= image %>')" >
+
       </div>
 
       <div class='card-product-shop-name'>
