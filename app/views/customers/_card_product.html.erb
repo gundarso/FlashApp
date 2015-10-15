@@ -3,13 +3,13 @@
   <%= link_to shop_sale_path(sale.shop, sale) do %>
     <div class="card-product">
       <div class="card-product-thumbnail">
-
-      </div>
-      <% if sale.picture.present? %>
+        <% if sale.picture.present? %>
           <%= image_tag sale.picture.url(:thumb) %>
-        </p>
-      <% else sale.shop.picture.present? %>
-      <% end %>
+        <% else %>
+          <%= image_tag ("GetNGo1.png"), width:'35%' %>
+        <% end %>
+      </div>
+
       <div class='card-product-shop-name'>
         <%= sale.shop.name %>
         <div class='card-product-terms'><%= sale.terms %></div>
