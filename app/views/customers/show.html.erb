@@ -10,12 +10,11 @@
               <%= image_tag ("GetNGo1.png") %>
             <% end %>
         </div>
-        <span class="card-info"><%= @customer.first_name %></span>
+        <div class="card-info"> <span class="card-title"><%= @customer.first_name %></span>
 <div class="row">
   <div class="well margin-left-right">
       <div class="tab-content">
       <h1>Profile details</h1>
-            <strong>Name:</strong> <%= @customer.first_name %><br>
             <strong>Year of birth:</strong> <%= @customer.birth_year %><br>
             <strong>Base location:</strong> <%= @customer.base_location %><br>
             <h3>Categories of interest</h3>

@@ -8,14 +8,11 @@
               <%= image_tag @customer.picture.url(:thumb) %>
             <% else %>
               <%= image_tag ("GetNGo1.png") %>
-            <% end %>        </div>
-
+            <% end %>
+        </div>
+        <div class="card-info"> <span class="card-title"><%= @customer.first_name %></span>
 
 <div class="row">
-<div class="text-center">
-
-<div class="card-info"> <span class="card-title"><%= @customer.first_name %></span>
-</div>
 
 <h1>Edit your profile</h1>
 

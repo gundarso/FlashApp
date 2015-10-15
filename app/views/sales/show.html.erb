@@ -13,21 +13,26 @@
         </div>
         <div class="card-info"> <span class="card-title"><%= @shop.name %></span>
 
-
-<h1>Sale details</h1>
-  <strong>Shops: </strong> <%= @shop.name %><br>
-  <strong>Category: </strong> <%= @sale.category.name %><br>
-  <strong>Product name: </strong> <%= @sale.product_name %><br>
-  <strong>Product description: </strong> <%= @sale.product_description %><br>
-  <strong>Product quantity: </strong> <%= @sale.product_quantity %><br>
-  <strong>Price: </strong><%= @sale.price %> EUR<br>
-  <strong>Terms & conditions: </strong> <%= @sale.terms %><br>
-  <strong>Sale starts at: </strong> <%= @sale.starting %><br>
-  <strong>Sale ends at: </strong> <%= @sale.ending %><br>
-  <strong>Street address: </strong> <%= @shop.street_address %><br>
-  <strong>City: </strong> <%= @shop.city %><br>
-  <strong>Phone: </strong> <%= @shop.phone %><br>
-  <strong>Contact email: </strong> <%= @shop.contact_email %><br>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <strong>Category: </strong> <%= @sale.category.name %><br>
+        <strong>Product name: </strong> <%= @sale.product_name %><br>
+        <strong>Product description: </strong> <%= @sale.product_description %><br>
+        <strong>Product quantity: </strong> <%= @sale.product_quantity %><br>
+        <strong>Price: </strong><%= @sale.price %> EUR<br>
+        <strong>Terms & conditions: </strong> <%= @sale.terms %><br>
+      </div>
+      <div class="col-lg-4">
+        <strong>Sale starts at: </strong> <%= @sale.starting.strftime("%H:%M") %><br>
+        <strong>Sale ends at: </strong> <%= @sale.ending.strftime("%H:%M") %><br>
+        <strong>Street address: </strong> <%= @shop.street_address %><br>
+        <strong>City: </strong> <%= @shop.city %><br>
+        <strong>Phone: </strong> <%= @shop.phone %><br>
+        <strong>Contact email: </strong> <%= @shop.contact_email %><br>
+      </div>
+    </div>
+  </div>
 
 <% if @sale.picture.present? %>
   <%= image_tag @sale.picture.url(:thumb) %>
