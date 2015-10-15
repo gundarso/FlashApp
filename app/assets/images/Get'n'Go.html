@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/customers -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.pac-container{background-color:#fff;position:absolute!important;z-index:1000;border-radius:2px;border-top:1px solid #d9d9d9;font-family:Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,0.3);-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}.pac-logo:after{content:"";padding:1px 1px 1px 0;height:16px;text-align:right;display:block;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3.png);background-position:right;background-repeat:no-repeat;background-size:120px 14px}.hdpi.pac-logo:after{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/powered-by-google-on-white3_hdpi.png)}.pac-item{cursor:default;padding:0 4px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;line-height:30px;text-align:left;border-top:1px solid #e6e6e6;font-size:11px;color:#999}.pac-item:hover{background-color:#fafafa}.pac-item-selected,.pac-item-selected:hover{background-color:#ebf2fe}.pac-matched{font-weight:700}.pac-item-query{font-size:13px;padding-right:3px;color:#000}.pac-icon{width:15px;height:20px;margin-right:7px;margin-top:6px;display:inline-block;vertical-align:top;background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons.png);background-size:34px}.hdpi .pac-icon{background-image:url(https://maps.gstatic.com/mapfiles/api-3/images/autocomplete-icons_hdpi.png)}.pac-icon-search{background-position:-1px -1px}.pac-item-selected .pac-icon-search{background-position:-18px -1px}.pac-icon-marker{background-position:-1px -161px}.pac-item-selected .pac-icon-marker{background-position:-18px -161px}.pac-placeholder{color:gray}</style><style type="text/css">.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div{font-weight:400}</style><link type="text/css" rel="stylesheet" href="./Get'n'Go_files/css"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style>
+  <meta charset="utf-8">
+  <title>Get'n'Go</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" media="all" href="./Get'n'Go_files/application.self-cd278be8b635cd5c80acdcfdda5b4eaec0a911a8bf06b4661312aedd64a7f5af.css">
+  <link rel="stylesheet" media="screen" href="./Get'n'Go_files/css(1)">
+  <link rel="stylesheet" href="./Get'n'Go_files/font-awesome.min.css">
+
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="LbkptBimNgo3+ME8ur9dvL20PTLvXS0FE3AOPsW+zecCnJKReJU4lrDCJ3a7aNWMnJmJ8MRNWYsTLEoKeM2CpA==">
+   <!-- Custom Fonts -->
+    <link href="./Get'n'Go_files/css(2)" rel="stylesheet" type="text/css">
+    <link href="./Get'n'Go_files/css(3)" rel="stylesheet" type="text/css">
+    <link href="./Get'n'Go_files/css(4)" rel="stylesheet" type="text/css">
+    <link href="./Get'n'Go_files/css(5)" rel="stylesheet" type="text/css">
+<script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/common.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/map.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/util.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/onion.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/controls.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/stats.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/marker.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/overlay.js"></script><script type="text/javascript" charset="UTF-8" src="./Get'n'Go_files/places_impl.js"></script></head>
+<body id="page-top" class="index" cz-shortcut-listen="true">
+
+<nav class="navbar navbar-default navbar-fixed-top navbar-opaque">
+        <div class="container">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a href="http://localhost:3000/"><img alt="image" width="130" class="navbar-brand page-scroll" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a class="page-scroll" href="./Get'n'Go_files/Get'n'Go.html">Sales near me</a></li>
+                  <li class="dropdown">
+                      <a id="drop2" href="http://localhost:3000/customers#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="drop2">
+                        <li><a href="http://localhost:3000/customers/1">View profile</a></li>
+                        <li><a rel="nofollow" data-method="delete" href="http://localhost:3000/customers/sign_out">
+                        Log out</a></li><a rel="nofollow" data-method="delete" href="http://localhost:3000/customers/sign_out">
+</a>                      </ul>
+                    </li>
+                    </ul></div><!-- /.navbar-collapse -->
+              </div><!-- /.navbar-collapse -->
+    </nav>
+
+
+  <div class="marginleft">
+<div class="site-container">
+  <div class="sidebar">
+  <div class="search-product-container">
+  <form action="./Get'n'Go_files/Get'n'Go.html" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+  <div class="welll no-margin-bottom">
+  <label for="Enter_your_search_location:">Enter your search location:</label>
+  <input type="text" name="query[base_location]" id="query_base_location" value="Brisele, Beļģija" placeholder="Ievadiet atrašanās vietu" autocomplete="off"><input type="submit" name="commit" value="Find my sale" class="btn btn-primary-margin"><br>
+    </div>
+    <div class="welll no-margin-bottom">
+       <div> <label for="Choose_a_category:">Choose a category:</label></div>
+    <input type="checkbox" name="query[category][]" id="query_category_" value="1" checked="checked">
+        Clothing &amp; shoes
+        <input type="checkbox" name="query[category][]" id="query_category_" value="2" checked="checked">
+        Electronics &amp; toys
+        <input type="checkbox" name="query[category][]" id="query_category_" value="3">
+        Events &amp; entertainment<br>
+        <input type="checkbox" name="query[category][]" id="query_category_" value="4" checked="checked">
+        Flowers &amp; gifts
+        <input type="checkbox" name="query[category][]" id="query_category_" value="5" checked="checked">
+        Food &amp; drinks
+        <input type="checkbox" name="query[category][]" id="query_category_" value="6">
+        Health &amp; beauty<br>
+        <input type="checkbox" name="query[category][]" id="query_category_" value="7">
+        House &amp; home
+        <input type="checkbox" name="query[category][]" id="query_category_" value="8">
+        Jewellery &amp; accessories
+        <input type="checkbox" name="query[category][]" id="query_category_" value="9">
+        Other categories
+    <br>
+</div></form>
+
+
+  </div>
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/11/sales/17">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        Inno Neuve
+        <div class="card-product-terms">70% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">YAMAHA amplifier</span> for $<span class="card-product-price">276€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          20:14:12
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/9/sales/10">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        Bouquet M
+        <div class="card-product-terms">20% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">earrings</span> for $<span class="card-product-price">234€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          21:00:55
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/4/sales/6">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        GAP
+        <div class="card-product-terms">40% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">earrings</span> for $<span class="card-product-price">24€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          19:00:41
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/5/sales/16">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        FNAC
+        <div class="card-product-terms">10% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">scarf</span> for $<span class="card-product-price">276€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          20:53:57
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/8/sales/9">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        Jacques et fils
+        <div class="card-product-terms">30% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">scarf</span> for $<span class="card-product-price">256€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          20:35:03
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/5/sales/4">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        FNAC
+        <div class="card-product-terms">40% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">scarf</span> for $<span class="card-product-price">53€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          20:58:09
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/1/sales/5">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        Zara
+        <div class="card-product-terms">2 + 1</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">iPod</span> for $<span class="card-product-price">35€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          21:29:25
+        </div>
+      </div>
+    </div>
+</a></div>
+
+     <div class="card-product-container">
+  <a href="http://localhost:3000/shops/3/sales/20">
+    <div class="card-product">
+      <div class="card-product-thumbnail">
+            <img width="35%" src="./Get'n'Go_files/GetNGo1-2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590.png" alt="Getngo1 2525b3765b3c6e3ae65bad256d1aba6acf7148b59167a3cef2e0664f3f9c7590">
+      </div>
+
+      <div class="card-product-shop-name">
+        H&amp;M
+        <div class="card-product-terms">20% off</div>
+
+      </div>
+      <div class="card-product-sentence">
+        Product in sale: <span class="card-product-name">scarf</span> for $<span class="card-product-price">35€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class="card-product-ending">Sale ends at:
+          20:03:11
+        </div>
+      </div>
+    </div>
+</a></div>
+
+  </div>
+  <div class="map-container">
+    <div id="map" class="thumbnail" style="width: 100%; height: 100%; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 221px; top: 237px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 221px; top: 493px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 477px; top: 237px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 477px; top: 493px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -35px; top: 237px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 221px; top: 749px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -35px; top: 493px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 477px; top: -19px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 221px; top: -19px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 477px; top: 749px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 733px; top: 237px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 733px; top: 493px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 733px; top: -19px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -35px; top: -19px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -35px; top: 749px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 733px; top: 749px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 221px; top: 237px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 221px; top: 493px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 477px; top: 237px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 477px; top: 493px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -35px; top: 237px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 221px; top: 749px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -35px; top: 493px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 477px; top: -19px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 221px; top: -19px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 477px; top: 749px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 733px; top: 237px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 733px; top: 493px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 733px; top: -19px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -35px; top: -19px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -35px; top: 749px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 733px; top: 749px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="transform: translateZ(0px); position: absolute; left: 221px; top: 237px;"><img src="./Get'n'Go_files/vt" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 221px; top: 493px;"><img src="./Get'n'Go_files/vt(1)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 477px; top: 237px;"><img src="./Get'n'Go_files/vt(2)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 477px; top: 493px;"><img src="./Get'n'Go_files/vt(3)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: -35px; top: 237px;"><img src="./Get'n'Go_files/vt(4)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 221px; top: 749px;"><img src="./Get'n'Go_files/vt(5)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: -35px; top: 493px;"><img src="./Get'n'Go_files/vt(6)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 477px; top: -19px;"><img src="./Get'n'Go_files/vt(7)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 221px; top: -19px;"><img src="./Get'n'Go_files/vt(8)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 477px; top: 749px;"><img src="./Get'n'Go_files/vt(9)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 733px; top: 237px;"><img src="./Get'n'Go_files/vt(10)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 733px; top: 493px;"><img src="./Get'n'Go_files/vt(11)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 733px; top: -19px;"><img src="./Get'n'Go_files/vt(12)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: -35px; top: -19px;"><img src="./Get'n'Go_files/vt(13)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: -35px; top: 749px;"><img src="./Get'n'Go_files/vt(14)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div style="transform: translateZ(0px); position: absolute; left: 733px; top: 749px;"><img src="./Get'n'Go_files/vt(15)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"><div class="cluster"></div><div class="cluster"></div><div class="cluster"></div><div class="cluster"></div><div class="cluster"></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=50.836079,4.363138&z=14&t=m&hl=lv-LV&gl=US&mapclient=apiv3" title="Noklikšķiniet, lai apskatītu šo reģionu pakalpojumā Google Maps." style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="./Get'n'Go_files/google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 217px; top: 359px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Kartes dati</div><div style="font-size: 13px;">Informācija par karti ©2015 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="./Get'n'Go_files/mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 284px; bottom: 0px; width: 169px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Kartes dati</a><span style="">Informācija par karti ©2015 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Informācija par karti ©2015 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 114px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a href="https://www.google.com/intl/lv-LV_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Pakalpojumu sniegšanas noteikumi</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; height: 14px; line-height: 14px; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right; vertical-align: middle; display: inline-block;"><a target="_new" title="Ziņot Google par kļūdām ceļu kartē vai attēlos" href="https://www.google.com/maps/@50.8360792,4.3631378,14z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Paziņot par kļūdu kartē</a></div></div><div class="gmnoprint" draggable="false" controlwidth="28" controlheight="93" style="margin: 10px; -webkit-user-select: none; position: absolute; bottom: 107px; right: 28px;"><div class="gmnoprint" controlwidth="28" controlheight="55" style="position: absolute; left: 0px; top: 38px;"><div draggable="false" style="-webkit-user-select: none; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; cursor: pointer; width: 28px; height: 55px; background-color: rgb(255, 255, 255);"><div title="Tuvināt" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./Get'n'Go_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: 0px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 120px; height: 54px;"></div></div><div style="position: relative; overflow: hidden; width: 67%; height: 1px; left: 16%; top: 0px; background-color: rgb(230, 230, 230);"></div><div title="Tālināt" style="position: relative; width: 28px; height: 27px; left: 0px; top: 0px;"><div style="overflow: hidden; position: absolute; width: 15px; height: 15px; left: 7px; top: 6px;"><img src="./Get'n'Go_files/tmapctrl.png" draggable="false" style="position: absolute; left: 0px; top: -15px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 120px; height: 54px;"></div></div></div></div><div controlwidth="28" controlheight="28" style="box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-radius: 2px; width: 28px; height: 28px; cursor: url(https://maps.gstatic.com/mapfiles/openhand_8_8.cur) 8 8, default; position: absolute; left: 0px; top: 0px; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: 1px;"></div><div style="position: absolute; left: 1px; top: 1px;"><div aria-label="Ielas attēls: cilvēciņa vadība" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px;"><img src="./Get'n'Go_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -26px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div aria-label="Cilvēciņš atrodas kartes augšdaļā" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Get'n'Go_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -52px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div aria-label="Ielas attēls: cilvēciņa vadība" style="width: 26px; height: 26px; overflow: hidden; position: absolute; left: 0px; top: 0px; visibility: hidden;"><img src="./Get'n'Go_files/cb_scout5.png" draggable="false" style="position: absolute; left: -147px; top: -78px; width: 215px; height: 835px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div></div><div class="gmnoprint" controlwidth="28" controlheight="0" style="display: none; position: absolute;"><div title="Pagriezt karti par 90 grādiem" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; cursor: pointer; display: none; background-color: rgb(255, 255, 255);"><img src="./Get'n'Go_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: 6px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div><div class="gm-tilt" style="width: 28px; height: 28px; overflow: hidden; position: absolute; border-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; top: 0px; cursor: pointer; background-color: rgb(255, 255, 255);"><img src="./Get'n'Go_files/tmapctrl4.png" draggable="false" style="position: absolute; left: -141px; top: -13px; width: 170px; height: 54px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></div></div><div class="gmnoprint" style="margin: 10px; z-index: 0; position: absolute; cursor: pointer; left: 0px; top: 0px;"><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Rādīt ielu karti" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-left-radius: 2px; border-top-left-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; min-width: 26px; font-weight: 500; background-color: rgb(255, 255, 255); background-clip: padding-box;">Karte</div><div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; left: 0px; top: 31px; text-align: left; display: none; background-color: white;"><div draggable="false" title="Rādīt ielu karti ar reljefu" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden; display: none;"><img src="./Get'n'Go_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Reljefs</label></div></div></div><div class="gm-style-mtc" style="float: left;"><div draggable="false" title="Rādīt satelīta fotogrāfisko datu bāzi" style="direction: ltr; overflow: hidden; text-align: center; position: relative; color: rgb(86, 86, 86); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 8px; border-bottom-right-radius: 2px; border-top-right-radius: 2px; -webkit-background-clip: padding-box; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; border-left-width: 0px; min-width: 37px; background-color: rgb(255, 255, 255); background-clip: padding-box;">Satelīts</div><div style="z-index: -1; padding: 2px; border-bottom-left-radius: 2px; border-bottom-right-radius: 2px; box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px; position: absolute; right: 0px; top: 31px; text-align: left; display: none; background-color: white;"><div draggable="false" title="Parādīt fotogrāfisko datu bāzi ar ielu nosaukumiem" style="color: rgb(0, 0, 0); font-family: Roboto, Arial, sans-serif; -webkit-user-select: none; font-size: 11px; padding: 6px 8px 6px 6px; direction: ltr; text-align: left; white-space: nowrap; background-color: rgb(255, 255, 255);"><span role="checkbox" style="box-sizing: border-box; position: relative; line-height: 0; font-size: 0px; margin: 0px 5px 0px 0px; display: inline-block; border: 1px solid rgb(198, 198, 198); border-radius: 1px; width: 13px; height: 13px; vertical-align: middle; background-color: rgb(255, 255, 255);"><div style="position: absolute; left: 1px; top: -2px; width: 13px; height: 11px; overflow: hidden;"><img src="./Get'n'Go_files/imgs8.png" draggable="false" style="position: absolute; left: -52px; top: -44px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; width: 68px; height: 67px;"></div></span><label style="vertical-align: middle; cursor: pointer;">Iezīmes</label></div></div></div></div></div></div>
+  </div>
+</div>
+</div>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <span class="copyright">Copyright © Get'N'Go 2015</span>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://twitter.com/GetnGoflash"><i class="fa fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li><a href="http://localhost:3000/customers#">Privacy Policy</a>
+                        </li>
+                        <li><a href="http://localhost:3000/customers#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  <script src="./Get'n'Go_files/js"></script>
+  <script src="./Get'n'Go_files/markerclusterer_packed.js"></script>
+  <script src="./Get'n'Go_files/infobox_packed.js" type="text/javascript"></script>
+  <script src="./Get'n'Go_files/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js"></script>
+<script src="./Get'n'Go_files/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js"></script>
+<script src="./Get'n'Go_files/underscore.self-4b328e42c558197d5b99d7727cfcc60bac9763fad660651230e8baf93f6067ed.js"></script>
+<script src="./Get'n'Go_files/underscore.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js"></script>
+<script src="./Get'n'Go_files/base.self-8dd1d1a22a7ff3bf4faa70885ea5f452367e7249102c52508c66d85ca396ee8b.js"></script>
+<script src="./Get'n'Go_files/base.self-5c31367e8435d872a028f6605074c8b1e15b9469a128b92dd29dfe40165b8ca3.js"></script>
+<script src="./Get'n'Go_files/base_builder.self-2a2088185a25893bbee6bf3da7fde2f1160e33f9903e29e01701ecdf87326e98.js"></script>
+<script src="./Get'n'Go_files/builder.self-77682740ac05e1b18efcf955f75aabdc3877aeee1ee4d5d6fddc74f8a08009ea.js"></script>
+<script src="./Get'n'Go_files/handler.self-2f220cab5c91a054a6ee7f5b4c1eaab6edd160062ee3709c81714c18a6fbefa3.js"></script>
+<script src="./Get'n'Go_files/null_clusterer.self-c6d6f37e996f50b27bf70e66b8956ee03cd4f3e35ae2e69c7b03e9dff7ea48e3.js"></script>
+<script src="./Get'n'Go_files/common.self-4b07ecd5e825fd2ba2793cb0323b0f19636ae2343ad8e8e9fe419152107b8ab4.js"></script>
+<script src="./Get'n'Go_files/bound.self-f340597454ebfa045f68c5f93f61cff52646146ec38c903a2769e5b0501cd687.js"></script>
+<script src="./Get'n'Go_files/circle.self-188e8cef42efa47cf5a4a3956af3dc67a3d6651bc2a9ca220cfcb6fc3e463e35.js"></script>
+<script src="./Get'n'Go_files/clusterer.self-a1f1a7df46fc8cecc592eef0f15b9e02f3431c8fa70ed30ce4de854e7facb5c4.js"></script>
+<script src="./Get'n'Go_files/kml.self-ffee6612ec52f7bcd758c1b5370a0e803412189ce09773551831e6c06a3375b1.js"></script>
+<script src="./Get'n'Go_files/map.self-6de83910df5426e7f72211a33d291d790c3198744bdced71b84572bfca56201c.js"></script>
+<script src="./Get'n'Go_files/marker.self-742a43efffcab09bde1334c67758f411c41e4fa1df3dd5a39e498e7f7e78e27c.js"></script>
+<script src="./Get'n'Go_files/polygon.self-08644c000d23e711283ea74461680417f8e6c30fe6c32c3dcb7cc9395e9e3f17.js"></script>
+<script src="./Get'n'Go_files/polyline.self-22e88b34eec70842a3547dd072bbf85a45c001b0a479fc11ec22bd242b6703f4.js"></script>
+<script src="./Get'n'Go_files/bound.self-d13a639bd7207854bf9ef3f6df82bea172352162b142f56e7032ff7ac9193b1e.js"></script>
+<script src="./Get'n'Go_files/circle.self-33825f7d2fed1c7ba3c7afae7bd2e4f616b77373660fb65d895affcc5c952610.js"></script>
+<script src="./Get'n'Go_files/clusterer.self-4f2479016fe0e484ef10477924f1bd0df5103bd5d9fca97dacb1a805369eae1d.js"></script>
+<script src="./Get'n'Go_files/kml.self-5ec58fa580d178250382b8139e22df32db261af083e6ec63528aec06ac26f9c3.js"></script>
+<script src="./Get'n'Go_files/map.self-fbfa0453de0420c083e9daee1f103702e6fb765d977bd361ebca9265c754f1fc.js"></script>
+<script src="./Get'n'Go_files/marker.self-1cffb1966c70a5ca4fb34e8ac501dca0e7c42af09f3f99752caa5fc6f09b1d02.js"></script>
+<script src="./Get'n'Go_files/polygon.self-ceb351c472231550371b47497b02ad128fbf6e44c30482fb5c153ef880fad696.js"></script>
+<script src="./Get'n'Go_files/polyline.self-d6d7caf58094ef9b48b3e93abdcc0f43c6b3fb204c882f4613577480cbe5d857.js"></script>
+<script src="./Get'n'Go_files/primitives.self-5b8a3a670839d76c06f9877827daa0d739b27f8d6ebd346d7fc6006819755e65.js"></script>
+<script src="./Get'n'Go_files/google.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Get'n'Go_files/agency.self-8352fa9b98cf6505d63e8273967fdf15ef1aa8978bf458a397499c013990ec18.js"></script>
+<script src="./Get'n'Go_files/cbpAnimatedHeader.self-4eae8ac463d0c72b58be59d6aea85513489b23c6e7dc22009d017719aff4261a.js"></script>
+<script src="./Get'n'Go_files/classie.self-aa5441f71840598d738a17f27b2fbf63666f96663235a39a54505f2c791a2adc.js"></script>
+<script src="./Get'n'Go_files/customers.self-a78fea81bfbbdb836f7a5911ea7c2db658b395add876a0a822ab3ded889dae54.js"></script>
+<script src="./Get'n'Go_files/jqBootstrapValidation.self-3ea7bb7d0305ec32c8173c570f23fb03516b5767c68b345c6cc55dccc189f6b5.js"></script>
+<script src="./Get'n'Go_files/jquery.easing.min.self-e88e06864b07656111ecb54bbc9d29cfeb135630d3d8e403646bde06ea237511.js"></script>
+<script src="./Get'n'Go_files/sales.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Get'n'Go_files/shops.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Get'n'Go_files/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js"></script>
+<script src="./Get'n'Go_files/application.self-c815ded9af3085ba70bef3cb362e9533d7fdeab0ab5d7c9b0a4946194785e3b3.js"></script>
+   <script>
+//<![CDATA[
+
+   $(document).on('ready', function() {
+     handler = Gmaps.build('Google');
+     handler.buildMap({ internal: { id: 'map' } }, function(){
+       markers = handler.addMarkers([{"lat":50.8365114,"lng":4.3574558,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eZara\u003c/h1\u003e\n        \u003ch4\u003eToison d\u0026#39;Or 25\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003eiPod \u003cstrong\u003efor\u003c/strong\u003e 35 € \u003cstrong\u003eTerms:\u003c/strong\u003e 2 + 1\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/1/sales/5\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"},{"lat":50.8514964,"lng":4.3548686,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eH\u0026amp;M\u003c/h1\u003e\n        \u003ch4\u003eRue Neuve 27\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003escarf \u003cstrong\u003efor\u003c/strong\u003e 35 € \u003cstrong\u003eTerms:\u003c/strong\u003e 20% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/3/sales/20\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"},{"lat":50.8278408,"lng":4.371407,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eGAP\u003c/h1\u003e\n        \u003ch4\u003eChaussee d\u0026#39;Ixelles 387\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003eearrings \u003cstrong\u003efor\u003c/strong\u003e 24 € \u003cstrong\u003eTerms:\u003c/strong\u003e 40% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/4/sales/6\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"},{"lat":50.8362711,"lng":4.3574625,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eFNAC\u003c/h1\u003e\n        \u003ch4\u003eToison d\u0026#39;Or 36\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003escarf \u003cstrong\u003efor\u003c/strong\u003e 276 € \u003cstrong\u003eTerms:\u003c/strong\u003e 10% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/5/sales/16\"\u003eView sale details\u003c/a\u003e\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003escarf \u003cstrong\u003efor\u003c/strong\u003e 53 € \u003cstrong\u003eTerms:\u003c/strong\u003e 40% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/5/sales/4\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"},{"lat":50.8252045,"lng":4.3654647,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eJacques et fils\u003c/h1\u003e\n        \u003ch4\u003eAvenue Louise 245\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003escarf \u003cstrong\u003efor\u003c/strong\u003e 256 € \u003cstrong\u003eTerms:\u003c/strong\u003e 30% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/8/sales/9\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"},{"lat":50.8181089,"lng":4.3629943,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eBouquet M\u003c/h1\u003e\n        \u003ch4\u003eplace Charles Graux 5\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003eearrings \u003cstrong\u003efor\u003c/strong\u003e 234 € \u003cstrong\u003eTerms:\u003c/strong\u003e 20% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/9/sales/10\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"},{"lat":50.8540425,"lng":4.3573446,"infowindow":"\u003cdiv class=\"card-map-container\"\u003e\n        \u003cdiv class=\"card-map\"\u003e\n        \u003ch1\u003eInno Neuve\u003c/h1\u003e\n        \u003ch4\u003eRue Neuve 125\u003c/h4\u003e\n            \u003cp\u003e\u003c/p\u003e\n\n          \u003cp\u003e\u003cstrong\u003eProduct in sale: \u003c/strong\u003eYAMAHA amplifier \u003cstrong\u003efor\u003c/strong\u003e 276 € \u003cstrong\u003eTerms:\u003c/strong\u003e 70% off\u003c/p\u003e\n        \u003ca class=\"btn btn-danger\" href=\"/shops/11/sales/17\"\u003eView sale details\u003c/a\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n"}]);
+       handler.bounds.extendWith(markers);
+       handler.fitMapToBounds();
+
+       function initializeAutocomplete(id) {
+         var element = document.getElementById(id);
+         if (element) {
+           var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
+           //google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+         }
+       }
+        initializeAutocomplete("query_base_location")
+     });
+   })
+
+//]]>
+</script>
+
+<script src="./Get'n'Go_files/bootstrap.min.js"></script>
+
+
+
+
+
+
+<div class="pac-container pac-logo" style="display: none;"><div class="pac-item"><span class="pac-icon pac-icon-marker"></span><span class="pac-item-query"><span class="pac-matched">Brisele</span></span><span><span class="pac-matched">Beļģija</span></span></div></div></body></html>
