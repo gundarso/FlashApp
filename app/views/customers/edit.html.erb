@@ -52,3 +52,18 @@
 </div>
 </div>
 
+<% content_for(:after_js) do %>
+ <%= javascript_tag do %>
+   $(document).on('ready', function() {
+
+       function initializeAutocomplete(id) {
+         var element = document.getElementById(id);
+         if (element) {
+           var autocomplete = new google.maps.places.Autocomplete(element, { types: ['geocode'] });
+           //google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+         }
+       }
+        initializeAutocomplete("customer_base_location")
+     });
+ <% end %>
+<% end %>
