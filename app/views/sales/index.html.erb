@@ -1,7 +1,8 @@
 <div class="pickbut">
       <div class="row">
 <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2
- text-center padding-top"><h1>Your shop currently has the following active sales:</h1>
+ text-center padding-top">
+    <div class="card hovercard"><h1>Your shop currently has the following active sales:</h1>
 
 <% @shop.sales.each do |sale| %><br>
 <strong>Sales category:</strong> <%= sale.category.name if sale.category %><br>
@@ -15,6 +16,7 @@
 
 <% if shop_signed_in? %>
 <%= link_to 'Add a new sale', new_shop_sale_path(@shop), class: "btn btn-primary" %>
+</div>
 </div>
 </div>
 </div>
