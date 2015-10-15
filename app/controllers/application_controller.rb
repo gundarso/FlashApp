@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.sign_in_count == 1
-      resource.class == Shop ? shop_path(resource) : customer_path(resource)
+      resource.class == Shop ? edit_shop_path(resource) : edit_customer_path(resource)
     else
       resource.class == Shop ? shop_sales_path(resource) : customers_path
     end

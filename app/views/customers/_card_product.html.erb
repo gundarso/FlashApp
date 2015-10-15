@@ -6,9 +6,10 @@
           <% else sale.shop.picture.present? %>
           <% end %>
           <h1><%= sale.shop.name %></h1>
-          <h4><%= sale.product_name %></h4></p>
-          <p><strong><%= sale.price %>€</strong></p>
-          <p><strong><%= sale.terms %></strong></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-danger" %>
+          <h4>Product: <%= sale.product_name %></h4></p>
+          <p>Price (EUR): <strong><%= sale.price %></strong></p>
+          <p>Terms & conditions: <strong><%= sale.terms %></strong></p>
+          <p>Sale ends at: <strong><%= sale.ending.strftime("%H:%M") %></strong></p>
+        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
       </div>
     </div>
