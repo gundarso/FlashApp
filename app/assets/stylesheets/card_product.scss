@@ -7,6 +7,10 @@
 .card-product-container {
   flex: 0 0 50%;
   padding: 10px;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 
@@ -21,3 +25,50 @@
 .card-product-container p {
   padding-left: 20px;
 }
+
+.card-product-thumbnail {
+  height: 220px;
+  background: rgb(111, 111, 111) none repeat scroll 0%;
+}
+
+.card-product-sentence {
+  padding: 20px;
+}
+
+.card-product-shop-name {
+  padding: 20px;
+  font-size: 26px;
+  display: flex;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.card-product-name {
+  color: black;
+}
+
+.card-product-sentence {
+  color: black;
+}
+
+
+.card-product-terms {
+  margin-left: auto;
+  font-size: 17px;
+  font-weight: 100;
+  color: rgb(8, 6, 0);
+  box-shadow: 0px -6px 0px rgb(254, 197, 3) inset;
+}
+
+.card-product-footer {
+  padding: 20px;
+  display: flex;
+}
+
+.card-product-ending {
+  margin-left: auto;
+  color: black;
+  opacity: 0.4;
+}
+

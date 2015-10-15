@@ -7,14 +7,14 @@ class CustomersController < ApplicationController
     @categories = Category.all
     @search = params.fetch(:query, {})
     @shops = Shop.near(@search.fetch(:base_location, @customer.base_location), 10)
-    @sales = Sale.where(category: @search.fetch(:category, @customer.categories)).active_sales
+    @sales = Sale.where(shop_id: @shops.map(&:id), category: @search.fetch(:category, @customer.categories)).active_sales
 
-    @sales = @sales.select { |sale| @shops.include?(sale.shop)}
-    # Let's DYNAMICALLY build the markers for the view.
-    @markers = Gmaps4rails.build_markers(@sales) do |sale, marker|
-      marker.lat sale.shop.latitude
-      marker.lng sale.shop.longitude
-      marker.infowindow render_to_string partial: "customers/card_map", locals: { shop: sale.shop  }
+    shop_with_sales = Shop.where(id: @sales.map(&:shop_id))
+
+    @markers = Gmaps4rails.build_markers(shop_with_sales) do |shop, marker|
+      marker.lat shop.latitude
+      marker.lng shop.longitude
+      marker.infowindow render_to_string partial: "customers/card_map", locals: { shop: shop, sales: @sales.select { |s| s.shop == shop } }
     end
   end
 

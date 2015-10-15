@@ -1,13 +1,28 @@
  <div class="card-product-container">
-        <div class="card-product">
-       <div class="carte-thumbnail">
 
+  <%= link_to shop_sale_path(sale.shop, sale) do %>
+    <div class="card-product">
+      <div class="card-product-thumbnail">
 
-       </div>
-          <h1><%= sale.shop.name %></h1>
-          <h4><%= sale.product_name %></h4></p>
-          <p><strong><%= sale.price %>€</strong></p>
-          <p><strong><%= sale.terms %></strong></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-danger" %>
+      </div>
+      <% if sale.picture.present? %>
+          <%= image_tag sale.picture.url(:thumb) %>
+        </p>
+      <% else sale.shop.picture.present? %>
+      <% end %>
+      <div class='card-product-shop-name'>
+        <%= sale.shop.name %>
+        <div class='card-product-terms'><%= sale.terms %></div>
+
+      </div>
+      <div class='card-product-sentence'>
+        Product in sale: <span class='card-product-name'><%= sale.product_name %></span> for $<span class='card-product-price'><%= sale.price %>€</span>
+      </div>
+      <div class="card-product-footer">
+        <div class='card-product-ending'>Sale ends at:
+          <%= sale.ending.strftime('%H:%M:%S') %>
+        </div>
       </div>
     </div>
+  <% end %>
+</div>
