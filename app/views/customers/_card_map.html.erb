@@ -1,5 +1,3 @@
-
-
 <div class="card-map-container">
         <div class="card-map">
         <h1><%= shop.name %></h1>
@@ -9,7 +7,7 @@
             <p><%#= image_tag("GetNGo1.png", width: '35%') %></p>
           <%# end %>
 
-          <% shop.sales.each do |sale| %>
+          <% sales.each do |sale| %>
           <p><strong>Product in sale: </strong><%= sale.product_name %> <strong>for</strong> <%= sale.price %> € <strong>Terms:</strong> <%= sale.terms %></p>
         <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-danger" %>
         <% end %>
