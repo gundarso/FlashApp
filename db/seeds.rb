@@ -184,6 +184,7 @@ Shop.create(
   password: 'nivelles@city2.be'
   )
 
+=begin
 20.times do
 Sale.create(
   category_id: rand(1..9),
@@ -196,6 +197,7 @@ Sale.create(
   ending: Time.now + rand(3600..18000)
   )
 end
+=end
 
 
 
