@@ -4,12 +4,12 @@
         <h4><%= shop.street_address %></h4>
           <%# if shop.picture.present? %>
           <%# else %>
-            <p><%#= image_tag("GetNGo1.png", width: '35%') %></p>
+          <%#= image_tag("GetNGo1.png", width: '35%') %>
           <%# end %>
 
           <% sales.each do |sale| %>
-          <p><strong>Product in sale: </strong><%= sale.product_name %> <strong>for</strong> <%= sale.price %> € <strong>Terms:</strong> <%= sale.terms %></p>
-        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-danger" %>
+          <p>Product in sale: <strong><%= sale.product_name %></strong> for<strong> <%= sale.price %></strong> € Terms:<strong> <%= sale.terms %></strong></p>
+        <%= link_to 'View sale details', shop_sale_path(sale.shop, sale), class: "btn btn-primary" %>
         <% end %>
       </div>
     </div>

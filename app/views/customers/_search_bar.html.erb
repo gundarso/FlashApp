@@ -6,17 +6,22 @@
     </div>
     <div class="welll no-margin-bottom">
        <div> <%= label_tag 'Choose a category:' %></div>
-        <% @categories.each do |category| %>
-    <%= check_box_tag 'query[category][]', category.id, @customer.category_ids.include?(category.id) ? true : false %>
-    <% counter += 1 %>
-      <% if counter == 3 %>
-        <%= category.name %><br>
-      <% elsif counter == 6 %>
-        <%= category.name %><br>
-      <% else %>
-        <%= category.name %>
-      <% end %>
-    <% end %><br>
-<% end %>
-</div>
+      <% @categories.each do |category| %>
+        <% counter += 1 %>
+        <div class="category-list">
+          <%= check_box_tag 'query[category][]', category.id, @customer.category_ids.include?(category.id) ? true : false %>
+
+          <% if counter == 3 %>
+            <%= category.name %><br>
+          <% elsif counter == 6 %>
+            <%= category.name %><br>
+          <% else %>
+            <%= category.name %>
+
+        <% end %>
+        </div>
+      <% end %><br>
+
+    <% end %>
+  </div>
 
