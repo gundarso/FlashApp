@@ -1,55 +1,44 @@
-<div class="pickback">
-      <div class="row">
-<div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2
- text-center padding-top">
-    <div class="card hovercard">
-
-        <div class="useravatar">
-          <% if @shop.picture.present? %>
-            <%= image_tag @shop.picture.url(:thumb) %>
-          <% else %>
-            <%= image_tag ("GetNGo1.png") %>
-          <% end %>
-        </div>
-        <div class="card-info"> <span class="card-title"><%= @shop.name %></span>
-
-    <div class="row">
-        <div class="marginmargin"><strong>Sales details</strong></div>
+<body>
+  <div class="wrap">
+    <div class="single_deal">
+      <div class="content" style="background-image: url(<%= raw @sale.picture.url %>) ">
+        <div class="hover">
+           <div class="description">
+        <h2>Sales details</h2>
         <strong>Category: </strong> <%= @sale.category.name %><br>
-        <strong>Product name: </strong> <%= @sale.product_name %><br>
         <strong>Product description: </strong> <%= @sale.product_description %><br>
         <strong>Product quantity: </strong> <%= @sale.product_quantity %><br>
-        <strong>Price (EUR): </strong><%= @sale.price %><br>
         <strong>Terms & conditions: </strong> <%= @sale.terms %><br>
-      </div>
+
         <strong>Sale starts at: </strong> <%= @sale.starting.strftime("%H:%M") %><br>
         <strong>Sale ends at: </strong> <%= @sale.ending.strftime("%H:%M") %><br>
-      </div>
 
-        ________________________________________________________________<br>
         <strong>Street address: </strong> <%= @shop.street_address %><br>
         <strong>City: </strong> <%= @shop.city %><br>
         <strong>Phone: </strong> <%= @shop.phone %><br>
-        <strong>Contact email: </strong> <%= @shop.contact_email %><br>
 
-<% if @sale.picture.present? %>
-  <%= image_tag @sale.picture.url(:thumb) %>
-<% end %><br>
-
-<% if shop_signed_in? && current_shop == @shop %>
-<%= link_to 'Back to shop sales list', shop_sales_path(@shop), class: "btn btn-primary" %>
-<%= link_to 'Edit sale details', edit_shop_sale_path(@shop, @sale), class: "btn btn-primary" %>
+          </div>
+          <div class="call_to_action text-center">
+            <% if shop_signed_in? && current_shop == @shop %>
+<%= link_to 'Back to shop sales list', shop_sales_path(@shop), class: "btn btn-primary" %><br><br>
+<%= link_to 'Edit sale details', edit_shop_sale_path(@shop, @sale), class: "btn btn-primary" %><br><br>
 <%= link_to 'Delete this sale', shop_sale_path(@shop, @sale), method: :delete, data: {confirm: "Do you really wish to delete this sale?"}, class: "btn btn-primary" %>
 <% else %>
-<%= link_to 'Get map directions', "//maps.google.com/maps?daddr=#{@shop.full_address}", target: '_blank', class: "btn btn-primary" %>
+<%= link_to 'Get map directions', "//maps.google.com/maps?daddr=#{@shop.full_address}", target: '_blank', class: "btn btn-primary" %><br><br><br>
 <%= link_to 'Back to your sales list', :back, class: "btn btn-primary" %>
 <% end %>
-    </div>
-       </div>
-      </div>
-    </div>
+          </div>
         </div>
+
+      </div>
+      <div class="title">
+        <h1 class="name"><%= @sale.product_name %></h1>
+        <h1 class="price">€<%= @sale.price %></h1>
       </div>
     </div>
-  </div>
 
+     <% if @sale.picture.present? %>
+          <% image = image_url @sale.picture.url %>
+        <% else %>
+          <% image = image_url ("GetNGo1.png") %>
+        <% end %>
