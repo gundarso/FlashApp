@@ -26,13 +26,11 @@
         <strong>Sale ends at: </strong> <%= @sale.ending.strftime("%H:%M") %><br>
       </div>
 
-        ________________________________________________________________
+        ________________________________________________________________<br>
         <strong>Street address: </strong> <%= @shop.street_address %><br>
         <strong>City: </strong> <%= @shop.city %><br>
         <strong>Phone: </strong> <%= @shop.phone %><br>
         <strong>Contact email: </strong> <%= @shop.contact_email %><br>
-
-    </div>
 
 <% if @sale.picture.present? %>
   <%= image_tag @sale.picture.url(:thumb) %>
@@ -43,8 +41,10 @@
 <%= link_to 'Edit sale details', edit_shop_sale_path(@shop, @sale), class: "btn btn-primary" %>
 <%= link_to 'Delete this sale', shop_sale_path(@shop, @sale), method: :delete, data: {confirm: "Do you really wish to delete this sale?"}, class: "btn btn-primary" %>
 <% else %>
+<%= link_to 'Get map directions', "//maps.google.com/maps?daddr=#{@shop.full_address}", target: '_blank', class: "btn btn-primary" %>
 <%= link_to 'Back to your sales list', :back, class: "btn btn-primary" %>
 <% end %>
+    </div>
        </div>
       </div>
     </div>

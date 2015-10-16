@@ -4,7 +4,7 @@ class SalesController < ApplicationController
   before_action :find_sale, only: [:show, :edit, :update, :destroy]
 
   def index
-    @shop.sales = Sale.active_sales
+    @shop.sales.active_sales
   end
 
   def show
