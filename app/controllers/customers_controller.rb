@@ -6,7 +6,7 @@ class CustomersController < ApplicationController
     @customer = current_customer
     @categories = Category.all
     @search = params.fetch(:query, {})
-    @shops = Shop.near(@search.fetch(:base_location, @customer.base_location), 10)
+    @shops = Shop.near(@search.fetch(:base_location, @customer.base_location), 35)
     @sales = Sale.where(shop_id: @shops.map(&:id), category: @search.fetch(:category, @customer.categories)).active_sales
 
     shop_with_sales = Shop.where(id: @sales.map(&:shop_id))
