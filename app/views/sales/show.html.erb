@@ -9,10 +9,17 @@
 
           </div>
           <div class="call_to_action">
-            <a class="button1" href="#">View More</a>
-            <a class="button2" href="#">Add to Cart</a>
+            <% if shop_signed_in? && current_shop == @shop %>
+<%= link_to 'Back to shop sales list', shop_sales_path(@shop), class: "btn btn-primary" %>
+<%= link_to 'Edit sale details', edit_shop_sale_path(@shop, @sale), class: "btn btn-primary" %>
+<%= link_to 'Delete this sale', shop_sale_path(@shop, @sale), method: :delete, data: {confirm: "Do you really wish to delete this sale?"}, class: "btn btn-primary" %>
+<% else %>
+<%= link_to 'Get map directions', "//maps.google.com/maps?daddr=#{@shop.full_address}", target: '_blank', class: "btn btn-primary" %>
+<%= link_to 'Back to your sales list', :back, class: "btn btn-primary" %>
+<% end %>
           </div>
         </div>
+
       </div>
       <div class="title">
         <h1 class="name"><%= @sale.product_name %></h1>
