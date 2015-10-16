@@ -5,12 +5,11 @@ Rails.application.routes.draw do
     devise_for :shops
     devise_for :customers
 
-
-    get 'welcome/index'
-
-    get 'welcome/show'
+    resources :welcome, only: [:index]
 
     root 'welcome#index'
+
+    resources :contacts, only: [:new, :create]
 
     resources :shops do
       resources :sales

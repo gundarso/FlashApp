@@ -14,11 +14,8 @@
 <div class="row">
   <div class="well margin-left-right">
       <div class="tab-content">
-      <h1>Profile details</h1>
-            <strong>Year of birth:</strong> <%= @customer.birth_year %><br>
-            <strong>Base location:</strong> <%= @customer.base_location %><br>
-            <h3>Categories of interest</h3>
-            <strong>Categories:</strong><br>
+            <h3>Base location:</h3> <%= @customer.base_location %><br>
+            <h3>Categories of interest:</h3>
             <% @customer.categories.each do |category| %>
             <%= category.name %><br>
             <% end %>
